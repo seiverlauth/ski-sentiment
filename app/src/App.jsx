@@ -54,7 +54,7 @@ export default function App() {
 
   // Load data
   useEffect(() => {
-    fetch('/trails.json')
+    fetch(`${import.meta.env.BASE_URL}trails.json`)
       .then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -223,50 +223,8 @@ export default function App() {
               Do bunny slopes sound friendlier than double diamonds? An empirical inquiry across {rawTrails.length.toLocaleString()} trails.
             </p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={badgeStyle}>{filtered.length.toLocaleString()} trails</span>
-            <button onClick={exportCSV} style={btnSecondary} title="Export filtered view as CSV">
-              <Download size={14} /> Export CSV
-            </button>
-          </div>
         </div>
       </header>
-
-      {/* ── FILTERS ── */}
-      <section style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 24, alignItems: 'center' }}>
-        <label style={labelStyle}>
-          State
-          <SelectWrap value={stateFilter} onChange={e => setStateFilter(e.target.value)}>
-            {states.map(s => <option key={s}>{s}</option>)}
-          </SelectWrap>
-        </label>
-        <label style={labelStyle}>
-          Resort
-          <SelectWrap value={resortFilter} onChange={e => setResortFilter(e.target.value)}>
-            {resorts
-              .filter(r => r === 'All' || stateFilter === 'All' || scored.some(t => t.resort === r && t.state === stateFilter))
-              .map(r => <option key={r}>{r}</option>)}
-          </SelectWrap>
-        </label>
-        <label style={{ ...labelStyle, flexGrow: 1, maxWidth: 320 }}>
-          Search
-          <div style={{ position: 'relative' }}>
-            <Search size={14} style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', color: '#6b6452' }} />
-            <input
-              type="text"
-              placeholder="Trail name…"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              style={{ ...inputStyle, paddingLeft: 28, width: '100%' }}
-            />
-          </div>
-        </label>
-        {(stateFilter !== 'All' || resortFilter !== 'All' || search) && (
-          <button onClick={() => { setStateFilter('All'); setResortFilter('All'); setSearch(''); }} style={{ ...btnSecondary, alignSelf: 'flex-end' }}>
-            Clear
-          </button>
-        )}
-      </section>
 
       {/* ── STICKY STATS PANEL ── */}
       <div style={statsPanelStyle}>
@@ -359,7 +317,47 @@ export default function App() {
 
       {/* ── TABLE ── */}
       <div style={cardStyle}>
-        <h2 style={{ ...chartTitleStyle, marginBottom: 16 }}>All Trails</h2>
+        <h2 style={{ ...chartTitleStyle, marginBottom: 12 }}>All Trails</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', marginBottom: 16 }}>
+          <label style={labelStyle}>
+            State
+            <SelectWrap value={stateFilter} onChange={e => setStateFilter(e.target.value)}>
+              {states.map(s => <option key={s}>{s}</option>)}
+            </SelectWrap>
+          </label>
+          <label style={labelStyle}>
+            Resort
+            <SelectWrap value={resortFilter} onChange={e => setResortFilter(e.target.value)}>
+              {resorts
+                .filter(r => r === 'All' || stateFilter === 'All' || scored.some(t => t.resort === r && t.state === stateFilter))
+                .map(r => <option key={r}>{r}</option>)}
+            </SelectWrap>
+          </label>
+          <label style={{ ...labelStyle, flexGrow: 1, maxWidth: 280 }}>
+            Search
+            <div style={{ position: 'relative' }}>
+              <Search size={13} style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', color: '#6b6452' }} />
+              <input
+                type="text"
+                placeholder="Trail name…"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                style={{ ...inputStyle, paddingLeft: 26, width: '100%' }}
+              />
+            </div>
+          </label>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }}>
+            {(stateFilter !== 'All' || resortFilter !== 'All' || search) && (
+              <button onClick={() => { setStateFilter('All'); setResortFilter('All'); setSearch(''); }} style={btnSecondary}>
+                Clear
+              </button>
+            )}
+            <button onClick={exportCSV} style={btnSecondary} title="Export filtered view as CSV">
+              <Download size={13} /> CSV
+            </button>
+            <span style={{ ...badgeStyle, fontSize: 12 }}>{filtered.length.toLocaleString()} trails</span>
+          </div>
+        </div>
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>
