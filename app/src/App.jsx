@@ -49,7 +49,7 @@ export default function App() {
   const [search, setSearch] = useState('');
 
   // Table sort
-  const [sortKey, setSortKey] = useState('score');
+  const [sortKey, setSortKey] = useState(null);
   const [sortDir, setSortDir] = useState('asc');
 
   // Load data
@@ -114,6 +114,7 @@ export default function App() {
 
   // Sorted table
   const sorted = useMemo(() => {
+    if (!sortKey) return filtered;
     const list = [...filtered];
     list.sort((a, b) => {
       let av, bv;
@@ -128,8 +129,12 @@ export default function App() {
   }, [filtered, sortKey, sortDir]);
 
   function toggleSort(key) {
-    if (sortKey === key) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
-    else { setSortKey(key); setSortDir('asc'); }
+    if (sortKey === key) {
+      if (sortDir === 'asc') setSortDir('desc');
+      else { setSortKey(null); setSortDir('asc'); }
+    } else {
+      setSortKey(key); setSortDir('asc');
+    }
   }
 
   // Export CSV
@@ -212,10 +217,9 @@ export default function App() {
           <div>
             <h1 style={{ fontSize: '1em', fontWeight: 'normal', marginBottom: '0.25em' }}>Trail Name Sentiment</h1>
             <p style={{ color: '#666' }}>
-              Do bunny slopes sound friendlier than double diamonds? {rawTrails.length.toLocaleString()} trails, 25 US resorts.
+              Do the names of green ski runs sound better than the names of blacks/double blacks?
             </p>
           </div>
-          <span style={badgeStyle}>{rawTrails.length.toLocaleString()} trails</span>
         </div>
       </header>
 
