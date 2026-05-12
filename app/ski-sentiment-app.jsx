@@ -32,8 +32,9 @@ const LEXICON = {
   cornice: -2, gully: -2, spine: -2, drop: -2, ledge: -2, crag: -2,
   gnar: -2, gnarly: -2, mogul: -1, moguls: -1, bumps: -1, rock: -1,
   rocks: -1, boulder: -1, face: -1, wall: -2, abyss: -3, void: -3,
-  precipice: -3,
-  bowl: -1, woods: -1, trees: -1, saddle: -1, line: -1,
+  precipice: -3, bowl: -1, woods: -1, trees: -1, tree: -1, saddle: -1, line: -1,
+  shaft: -2, cirque: -2, liftline: -1, waterfall: -1, mine: -1,
+  edge: -2, notch: -1, pitch: -1,
 
   // ---- HARSH ADJECTIVES (-1 to -2) ----
   steep: -2, narrow: -1, tight: -1, sharp: -1, broken: -2, twisted: -1,
@@ -42,14 +43,16 @@ const LEXICON = {
   haunted: -2, wild: -1, savage: -2, brutal: -3, vicious: -2,
   ruthless: -2, danger: -3, hazard: -2, warning: -2, beware: -2,
   never: -1, screaming: -2, screamer: -2, mean: -1, nasty: -2,
-  fearsome: -2, dread: -3, perilous: -3, treacherous: -3,
-  thunder: -1,
+  fearsome: -2, dread: -3, perilous: -3, treacherous: -3, thunder: -1,
+  storm: -2, gun: -2, dragon: -2, iron: -1, bullet: -1,
+  lightning: -1, shot: -1, double: -1,
 
   // ---- BUNNY HILL DICTION (+3) ----
   bunny: 3, lullaby: 3, easy: 3, gentle: 3, sweet: 3, sunny: 3,
   sunshine: 3, sunnyside: 3, smile: 3, happy: 3, joy: 3, dream: 3,
   pleasant: 3, lovely: 3, paradise: 3, heaven: 3, heavenly: 3,
   friendly: 3, cozy: 3, kindergarten: 3, family: 2,
+  home: 2, broadway: 1, skiway: 1, flats: 1, village: 1,
 
   // ---- PASTORAL / SCENIC (+2) ----
   meadow: 2, meadows: 2, grove: 2, pasture: 2, garden: 2, blossom: 2, flower: 2,
@@ -57,7 +60,7 @@ const LEXICON = {
   peaceful: 2, calm: 2, quiet: 2, serene: 2, tranquil: 2, leisure: 2,
   scenic: 2, panorama: 2, vista: 2, alpine: 1, aspen: 1, fern: 1,
   willow: 1, birch: 1, magic: 2, magical: 2, wonderland: 2,
-  creek: 1, forest: 1,
+  creek: 1, forest: 1, primrose: 2, larkspur: 2, columbine: 1, prospector: 1,
 
   // ---- MILD POSITIVE (+1) ----
   glade: 1, glades: 1, powder: 1, fluff: 1, cloud: 1, breeze: 1,
