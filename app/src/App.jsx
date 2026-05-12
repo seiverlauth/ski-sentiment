@@ -217,7 +217,7 @@ export default function App() {
           <div>
             <h1 style={{ fontSize: '1em', fontWeight: 'normal', marginBottom: '0.25em' }}>Trail Name Sentiment</h1>
             <p style={{ color: '#666' }}>
-              Do the names of green ski runs sound better than the names of blacks/double blacks?
+              Do the names of green ski runs sound more positive than the names of black and double black runs?
             </p>
           </div>
         </div>
