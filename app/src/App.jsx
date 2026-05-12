@@ -190,16 +190,13 @@ export default function App() {
   // ── Render ───────────────────────────────────────────────────────────────────
 
   if (loading) return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontStyle: 'italic', color: '#6b6452' }}>
-      Loading trail data…
-    </div>
+    <div style={{ padding: '2em', color: '#666' }}>Loading trail data…</div>
   );
 
   if (error) return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', gap: 12 }}>
-      <AlertCircle size={32} color="#b8341a" />
+    <div style={{ padding: '2em' }}>
       <p style={{ color: '#b8341a' }}>Failed to load trails.json: {error}</p>
-      <p style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic' }}>Make sure trails.json is in app/public/ (run: cp ../data/trails.json public/)</p>
+      <p style={{ color: '#666', fontSize: 12, marginTop: 8 }}>Make sure trails.json is in app/public/</p>
     </div>
   );
 
@@ -207,22 +204,18 @@ export default function App() {
   const scoreMax = Math.max(5, ...filtered.map(t => t.score));
 
   return (
-    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '32px 24px 64px' }}>
+    <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
       {/* ── HEADER ── */}
-      <header style={{ borderBottom: '3px double #2d3e2a', paddingBottom: 20, marginBottom: 28 }}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
+      <header style={{ borderBottom: '1px solid #000', paddingBottom: '1em', marginBottom: '1.5em' }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 4 }}>
-              <Mountain size={36} strokeWidth={1.5} />
-              <h1 style={{ fontSize: 40, fontWeight: 'normal', letterSpacing: '0.02em', fontVariant: 'small-caps' }}>
-                Trail Name Sentiment
-              </h1>
-            </div>
-            <p style={{ marginLeft: 48, fontStyle: 'italic', color: '#6b6452', fontSize: 14 }}>
-              Do bunny slopes sound friendlier than double diamonds? An empirical inquiry across {rawTrails.length.toLocaleString()} trails.
+            <h1 style={{ fontSize: '1em', fontWeight: 'normal', marginBottom: '0.25em' }}>Trail Name Sentiment</h1>
+            <p style={{ color: '#666' }}>
+              Do bunny slopes sound friendlier than double diamonds? {rawTrails.length.toLocaleString()} trails, 25 US resorts.
             </p>
           </div>
+          <span style={badgeStyle}>{rawTrails.length.toLocaleString()} trails</span>
         </div>
       </header>
 
@@ -230,14 +223,14 @@ export default function App() {
       <div style={statsPanelStyle}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, flex: 1 }}>
           {aggregates.map(a => (
-            <div key={a.difficulty} style={statsTileStyle(a.color)}>
-              <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: a.color, fontWeight: 'bold' }}>
+            <div key={a.difficulty} style={statsTileStyle()}>
+              <div style={{ fontSize: 12, color: a.color }}>
                 {a.label}
               </div>
-              <div style={{ fontSize: 28, color: a.avg > 0 ? '#3d8b5c' : a.avg < 0 ? '#b8341a' : '#6b6452', lineHeight: 1 }}>
+              <div style={{ fontSize: 22, color: a.avg > 0 ? '#3d8b5c' : a.avg < 0 ? '#b8341a' : '#666', lineHeight: 1.2 }}>
                 {a.avg > 0 ? '+' : ''}{a.avg}
               </div>
-              <div style={{ fontSize: 10, color: '#6b6452', fontStyle: 'italic' }}>n={a.count}</div>
+              <div style={{ fontSize: 12, color: '#666' }}>n={a.count}</div>
             </div>
           ))}
         </div>
@@ -252,40 +245,39 @@ export default function App() {
                 ? 'Yes — green names are more positive'
                 : 'No significant difference'}
             </div>
-            <div style={{ fontSize: 16, fontVariant: 'small-caps', letterSpacing: '0.04em', marginBottom: 2 }}>
+            <div style={{ fontSize: 15, marginBottom: 2 }}>
               {formatP(statsResult.p)}
             </div>
-            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 12, color: '#666' }}>
               Welch&rsquo;s t({Math.round(statsResult.df)}) = {statsResult.t.toFixed(2)}
             </div>
-            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic' }}>
+            <div style={{ fontSize: 12, color: '#666' }}>
               Cohen&rsquo;s d = {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)})
             </div>
-            <div style={{ fontSize: 10, color: '#6b6452', fontStyle: 'italic', marginTop: 3, borderTop: '1px dotted #d4cab3', paddingTop: 3 }}>
-              Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} sentiment pts
-              &nbsp;(n={statsResult.nA} green, n={statsResult.nB} hard)
+            <div style={{ fontSize: 12, color: '#666', marginTop: 4, borderTop: '1px solid #ccc', paddingTop: 4 }}>
+              Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} pts &nbsp;(n={statsResult.nA} green, n={statsResult.nB} hard)
             </div>
           </div>
         )}
       </div>
 
       {/* ── CHARTS ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))', gap: 20, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))', gap: 24, marginBottom: 24 }}>
 
         {/* Bar chart */}
         <div style={cardStyle}>
-          <h2 style={chartTitleStyle}>Average Sentiment by Tier</h2>
-          <p style={chartSubtitleStyle}>Error bars = ±1 standard error of the mean</p>
+          <h2 style={chartTitleStyle}>avg sentiment by tier</h2>
+          <p style={chartSubtitleStyle}>error bars = ±1 standard error of the mean</p>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={aggregates} margin={{ top: 20, right: 20, bottom: 8, left: 0 }}>
-              <CartesianGrid strokeDasharray="2 4" stroke="#d4cab3" />
-              <XAxis dataKey="label" tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
-              <YAxis tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
-              <Tooltip content={<BarTooltip />} cursor={{ fill: 'rgba(45,62,42,0.04)' }} />
-              <ReferenceLine y={0} stroke="#2d3e2a" strokeWidth={1} />
+              <CartesianGrid strokeDasharray="2 4" stroke="#ddd" />
+              <XAxis dataKey="label" tick={{ fill: '#000', fontSize: 12, fontFamily: 'ibm-plex-mono, monospace' }} axisLine={{ stroke: '#000' }} />
+              <YAxis tick={{ fill: '#000', fontSize: 12, fontFamily: 'ibm-plex-mono, monospace' }} axisLine={{ stroke: '#000' }} />
+              <Tooltip content={<BarTooltip />} cursor={{ fill: 'rgba(0,0,0,0.04)' }} />
+              <ReferenceLine y={0} stroke="#000" strokeWidth={1} />
               <Bar dataKey="avg" radius={[2, 2, 0, 0]}>
                 {aggregates.map((a, i) => <Cell key={i} fill={a.color} />)}
-                <ErrorBar dataKey="se" width={6} strokeWidth={1.5} stroke="#2d3e2a" direction="y" />
+                <ErrorBar dataKey="se" width={6} strokeWidth={1.5} stroke="#000" direction="y" />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -293,22 +285,22 @@ export default function App() {
 
         {/* Scatter chart */}
         <div style={cardStyle}>
-          <h2 style={chartTitleStyle}>Individual Trails</h2>
-          <p style={chartSubtitleStyle}>Hover for details. X-axis jittered to reduce overlap.</p>
+          <h2 style={chartTitleStyle}>individual trails</h2>
+          <p style={chartSubtitleStyle}>hover for details. x-axis jittered to reduce overlap.</p>
           <ResponsiveContainer width="100%" height={300}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 8, left: 0 }}>
-              <CartesianGrid strokeDasharray="2 4" stroke="#d4cab3" />
+              <CartesianGrid strokeDasharray="2 4" stroke="#ddd" />
               <XAxis
                 type="number" dataKey="x" domain={[0.5, 4.5]}
                 ticks={[1, 2, 3, 4]}
                 tickFormatter={v => DIFFICULTY_LABEL[DIFFICULTY_ORDER[v - 1]] || ''}
-                tick={{ fill: '#2d3e2a', fontSize: 10, fontFamily: 'Georgia' }}
-                axisLine={{ stroke: '#2d3e2a' }}
+                tick={{ fill: '#000', fontSize: 11, fontFamily: 'ibm-plex-mono, monospace' }}
+                axisLine={{ stroke: '#000' }}
               />
               <YAxis type="number" dataKey="score" domain={[scoreMin - 1, scoreMax + 1]}
-                tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
-              <Tooltip content={<ScatterTooltip />} cursor={{ strokeDasharray: '3 3', stroke: '#6b6452' }} />
-              <ReferenceLine y={0} stroke="#2d3e2a" strokeWidth={1} />
+                tick={{ fill: '#000', fontSize: 12, fontFamily: 'ibm-plex-mono, monospace' }} axisLine={{ stroke: '#000' }} />
+              <Tooltip content={<ScatterTooltip />} cursor={{ strokeDasharray: '3 3', stroke: '#666' }} />
+              <ReferenceLine y={0} stroke="#000" strokeWidth={1} />
               <Scatter data={filtered} shape={DotShape} />
             </ScatterChart>
           </ResponsiveContainer>
@@ -317,7 +309,7 @@ export default function App() {
 
       {/* ── TABLE ── */}
       <div style={cardStyle}>
-        <h2 style={{ ...chartTitleStyle, marginBottom: 12 }}>All Trails</h2>
+        <h2 style={{ ...chartTitleStyle, marginBottom: 12 }}>all trails</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', marginBottom: 16 }}>
           <label style={labelStyle}>
             State
@@ -361,7 +353,7 @@ export default function App() {
         <div style={{ overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>
-              <tr style={{ borderBottom: '2px solid #2d3e2a' }}>
+              <tr style={{ borderBottom: '1px solid #000' }}>
                 <Th label="Trail"      sortKey="name"       active={sortKey} dir={sortDir} onSort={toggleSort} />
                 <Th label="Resort"     sortKey="resort"     active={sortKey} dir={sortDir} onSort={toggleSort} />
                 <Th label="State"      sortKey="state"      active={sortKey} dir={sortDir} onSort={toggleSort} />
@@ -372,21 +364,21 @@ export default function App() {
             </thead>
             <tbody>
               {sorted.map((t, i) => (
-                <tr key={i} style={{ borderBottom: '1px dotted #d4cab3', background: i % 2 === 0 ? 'transparent' : 'rgba(45,62,42,0.018)' }}>
-                  <td style={{ padding: '7px 12px', fontWeight: 'bold' }}>{t.name}</td>
-                  <td style={{ padding: '7px 12px', color: '#6b6452', fontStyle: 'italic', whiteSpace: 'nowrap' }}>{t.resort}</td>
-                  <td style={{ padding: '7px 12px', color: '#6b6452' }}>{t.state}</td>
+                <tr key={i} style={{ borderBottom: '1px solid #ddd' }}>
+                  <td style={{ padding: '7px 12px' }}>{t.name}</td>
+                  <td style={{ padding: '7px 12px', color: '#666', whiteSpace: 'nowrap' }}>{t.resort}</td>
+                  <td style={{ padding: '7px 12px', color: '#666' }}>{t.state}</td>
                   <td style={{ padding: '7px 12px' }}>
                     <span style={{ display: 'inline-block', padding: '2px 7px', background: DIFFICULTY_COLOR[t.difficulty], color: 'white', fontSize: 11, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
                       {DIFFICULTY_LABEL[t.difficulty]}
                     </span>
                   </td>
-                  <td style={{ padding: '7px 12px', fontWeight: 'bold', color: t.score > 0 ? '#3d8b5c' : t.score < 0 ? '#b8341a' : '#6b6452' }}>
+                  <td style={{ padding: '7px 12px', color: t.score > 0 ? '#3d8b5c' : t.score < 0 ? '#b8341a' : '#666' }}>
                     {t.score > 0 ? '+' : ''}{t.score}
                   </td>
                   <td style={{ padding: '7px 12px', fontSize: 11 }}>
                     {t.hits.length === 0
-                      ? <span style={{ color: '#aaa', fontStyle: 'italic' }}>—</span>
+                      ? <span style={{ color: '#aaa' }}>—</span>
                       : t.hits.map((h, j) => (
                           <span key={j} style={{ display: 'inline-block', marginRight: 5, marginBottom: 2, padding: '1px 6px', background: h.score > 0 ? 'rgba(61,139,92,0.12)' : 'rgba(184,52,26,0.12)', border: `1px solid ${h.score > 0 ? '#3d8b5c' : '#b8341a'}`, fontSize: 10 }}>
                             {h.word} {h.score > 0 ? '+' : ''}{h.score}
@@ -401,8 +393,9 @@ export default function App() {
         </div>
       </div>
 
-      <footer style={{ marginTop: 32, paddingTop: 16, borderTop: '1px solid #d4cab3', fontSize: 11, color: '#6b6452', fontStyle: 'italic', textAlign: 'center' }}>
-        Source: OpenSkiMap (OpenStreetMap data) · Lexicon: ~170 ski-domain terms · 25 US resorts
+      <footer style={{ marginTop: '2em', paddingTop: '1em', borderTop: '1px solid #000', fontSize: 13, color: '#666' }}>
+        --<br />
+        source: OpenSkiMap / OpenStreetMap · lexicon: ~190 ski-domain terms · 25 US resorts
       </footer>
     </div>
   );
@@ -422,7 +415,7 @@ function SelectWrap({ value, onChange, children }) {
       <select value={value} onChange={onChange} style={selectStyle}>
         {children}
       </select>
-      <ChevronDown size={13} style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: '#2d3e2a' }} />
+      <ChevronDown size={13} style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: '#000' }} />
     </div>
   );
 }
@@ -440,75 +433,70 @@ function Th({ label, sortKey, active, dir, onSort }) {
 // ── Styles ───────────────────────────────────────────────────────────────────
 
 const cardStyle = {
-  background: 'white',
-  border: '1px solid #2d3e2a',
-  padding: '20px 20px 16px',
+  background: '#f3f4f1',
+  borderTop: '1px solid #000',
+  padding: '20px 0 16px',
   marginBottom: 0,
 };
 
 const chartTitleStyle = {
   fontSize: 15,
   fontWeight: 'normal',
-  fontVariant: 'small-caps',
-  letterSpacing: '0.05em',
   marginBottom: 2,
 };
 
 const chartSubtitleStyle = {
-  fontSize: 11,
-  color: '#6b6452',
-  fontStyle: 'italic',
+  fontSize: 12,
+  color: '#666',
   marginBottom: 16,
 };
 
 const tooltipStyle = {
-  background: '#f5efe0',
-  border: '1px solid #2d3e2a',
-  padding: '10px 14px',
-  fontFamily: 'Georgia, serif',
+  background: '#f3f4f1',
+  border: '1px solid #000',
+  padding: '8px 12px',
+  fontFamily: 'ibm-plex-mono, monospace',
   fontSize: 13,
-  boxShadow: '2px 2px 0 #2d3e2a',
   maxWidth: 260,
 };
 
 const badgeStyle = {
-  background: '#2d3e2a',
-  color: '#f5efe0',
-  padding: '4px 12px',
+  background: '#000',
+  color: '#f3f4f1',
+  padding: '3px 10px',
   fontSize: 13,
-  fontStyle: 'italic',
-  letterSpacing: '0.03em',
 };
 
 const btnSecondary = {
   display: 'inline-flex',
   alignItems: 'center',
   gap: 5,
-  padding: '6px 12px',
+  padding: '5px 10px',
   background: 'transparent',
-  border: '1px solid #2d3e2a',
+  border: '1px solid #000',
   fontFamily: 'inherit',
-  fontSize: 12,
-  color: '#2d3e2a',
+  fontSize: 13,
+  color: '#000',
+  cursor: 'pointer',
 };
 
 const inputStyle = {
-  padding: '7px 10px',
-  border: '1px solid #2d3e2a',
-  background: '#fafaf3',
+  padding: '5px 8px',
+  border: '1px solid #000',
+  background: '#f3f4f1',
   fontFamily: 'inherit',
   fontSize: 13,
-  color: '#2d3e2a',
+  color: '#000',
   width: '100%',
 };
 
 const selectStyle = {
-  padding: '7px 28px 7px 10px',
-  border: '1px solid #2d3e2a',
-  background: '#fafaf3',
+  padding: '5px 24px 5px 8px',
+  border: '1px solid #000',
+  background: '#f3f4f1',
   fontFamily: 'inherit',
   fontSize: 13,
-  color: '#2d3e2a',
+  color: '#000',
   appearance: 'none',
   width: '100%',
 };
@@ -517,10 +505,8 @@ const labelStyle = {
   display: 'flex',
   flexDirection: 'column',
   gap: 4,
-  fontSize: 11,
-  letterSpacing: '0.08em',
-  textTransform: 'uppercase',
-  color: '#6b6452',
+  fontSize: 12,
+  color: '#666',
   minWidth: 140,
 };
 
@@ -528,8 +514,6 @@ const thStyle = {
   textAlign: 'left',
   padding: '8px 12px',
   fontWeight: 'normal',
-  fontVariant: 'small-caps',
-  letterSpacing: '0.06em',
   fontSize: 13,
   whiteSpace: 'nowrap',
 };
@@ -538,28 +522,26 @@ const statsPanelStyle = {
   position: 'sticky',
   top: 0,
   zIndex: 100,
-  background: '#f5efe0',
-  borderTop: '2px solid #2d3e2a',
-  borderBottom: '2px solid #2d3e2a',
+  background: '#f3f4f1',
+  borderTop: '1px solid #000',
+  borderBottom: '1px solid #000',
   marginBottom: 24,
   display: 'flex',
   flexWrap: 'wrap',
   gap: 0,
-  boxShadow: '0 2px 8px rgba(45,62,42,0.12)',
 };
 
-function statsTileStyle(color) {
+function statsTileStyle() {
   return {
-    padding: '12px 20px',
-    borderRight: '1px solid #d4cab3',
+    padding: '10px 20px',
+    borderRight: '1px solid #ccc',
     minWidth: 100,
     flex: '1 0 auto',
   };
 }
 
 const statsResultStyle = {
-  padding: '12px 20px',
-  borderLeft: '2px solid #2d3e2a',
-  background: 'white',
+  padding: '10px 20px',
+  borderLeft: '1px solid #000',
   minWidth: 220,
 };

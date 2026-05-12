@@ -1,28 +1,32 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'IM Fell English', Georgia, 'Times New Roman', serif;
-  background: #f5efe0;
-  color: #2d3e2a;
-  min-height: 100vh;
+  font-family: ibm-plex-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.2;
+  background-color: #f3f4f1;
+  color: #000;
+  padding: 2em;
+  filter: url(#grainy);
 }
 
-/* Subtle graph-paper grid */
-body::before {
+/* SVG grain filter */
+body::after {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(45,62,42,0.035) 40px, rgba(45,62,42,0.035) 41px),
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(45,62,42,0.035) 40px, rgba(45,62,42,0.035) 41px);
+  z-index: 9999;
 }
 
-#root {
-  position: relative;
-  z-index: 1;
+a { color: #000; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button, select, input {
+  font-family: ibm-plex-mono, monospace;
+  font-size: 14px;
 }
 
-button { cursor: pointer; }
-select, input { font-family: inherit; }
+svg.grain-filter { position: fixed; width: 0; height: 0; }
