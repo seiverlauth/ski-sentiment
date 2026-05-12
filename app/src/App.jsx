@@ -49,8 +49,8 @@ export default function App() {
   const [search, setSearch] = useState('');
 
   // Table sort
-  const [sortKey, setSortKey] = useState(null);
-  const [sortDir, setSortDir] = useState('asc');
+  const [sortKey, setSortKey] = useState('score');
+  const [sortDir, setSortDir] = useState('desc');
 
   // Load data
   useEffect(() => {
@@ -239,28 +239,18 @@ export default function App() {
           ))}
         </div>
         {statsResult && (
-          <div style={statsResultStyle}>
-            <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6b6452', marginBottom: 6 }}>
-              Green vs. Black + Dbl-Black
+          <div style={{ ...statsResultStyle, position: 'relative' }} title={[
+            formatP(statsResult.p),
+            `effect size: ${statsResult.cohenD.toFixed(2)} (${cohenLabel(statsResult.cohenD)})`,
+            `green avg: +${statsResult.meanA.toFixed(2)} · hard avg: ${statsResult.meanB.toFixed(2)}`,
+            `Δ = ${(statsResult.meanA - statsResult.meanB).toFixed(2)} pts`,
+            `n=${statsResult.nA} green, n=${statsResult.nB} black/dbl`,
+          ].join('\n')}>
+            <div style={{ fontSize: 13, color: statsResult.p < 0.05 ? '#3d8b5c' : '#b8341a' }}>
+              {statsResult.p < 0.05 ? '✓ yes' : '✗ no'}
             </div>
-            {/* Verdict */}
-            <div style={{ fontSize: 13, fontWeight: 'bold', color: statsResult.p < 0.05 ? '#3d8b5c' : '#6b6452', marginBottom: 4 }}>
-              {statsResult.p < 0.05
-                ? 'Yes — green names are more positive'
-                : 'No significant difference'}
-            </div>
-            <div style={{ fontSize: 15, marginBottom: 2 }}>
-              {formatP(statsResult.p)}
-            </div>
-            <div style={{ fontSize: 12, color: '#666' }}>
-              Welch&rsquo;s t({Math.round(statsResult.df)}) = {statsResult.t.toFixed(2)}
-            </div>
-            <div style={{ fontSize: 12, color: '#666' }}>
-              Cohen&rsquo;s d = {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)})
-            </div>
-            <div style={{ fontSize: 12, color: '#666', marginTop: 4, borderTop: '1px solid #ccc', paddingTop: 4 }}>
-              Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} pts &nbsp;(n={statsResult.nA} green, n={statsResult.nB} hard)
-            </div>
+            <div style={{ fontSize: 12, color: '#666' }}>green names score higher</div>
+            <div style={{ fontSize: 11, color: '#aaa', marginTop: 4 }}>hover for stats</div>
           </div>
         )}
       </div>
