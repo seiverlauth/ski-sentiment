@@ -224,13 +224,11 @@ export default function App() {
       </header>
 
       {/* ── STICKY STATS PANEL ── */}
-      <div style={statsPanelStyle}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, flex: 1 }}>
+      <div className="stats-panel">
+        <div className="stats-tiles">
           {aggregates.map(a => (
-            <div key={a.difficulty} style={statsTileStyle()}>
-              <div style={{ fontSize: 12, color: a.color }}>
-                {a.label}
-              </div>
+            <div key={a.difficulty} className="stats-tile">
+              <div style={{ fontSize: 12, color: a.color }}>{a.label}</div>
               <div style={{ fontSize: 22, color: a.avg > 0 ? '#3d8b5c' : a.avg < 0 ? '#b8341a' : '#666', lineHeight: 1.2 }}>
                 {a.avg > 0 ? '+' : ''}{a.avg}
               </div>
@@ -249,7 +247,7 @@ export default function App() {
             ? 'green names score lower'
             : 'no significant difference';
           return (
-            <div style={{ ...statsResultStyle, position: 'relative' }} className="stats-verdict">
+            <div className="stats-result stats-verdict" style={{ position: 'relative' }}>
               <div style={{ fontSize: 13, color }}>
                 {verdict === 'yes' ? '✓ yes' : verdict === 'no' ? '✗ no' : '~ inconclusive'}
               </div>
@@ -268,7 +266,7 @@ export default function App() {
       </div>
 
       {/* ── CHARTS ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))', gap: 24, marginBottom: 24 }}>
+      <div className="charts-grid">
 
         {/* Bar chart */}
         <div style={cardStyle}>
@@ -316,7 +314,7 @@ export default function App() {
       {/* ── TABLE ── */}
       <div style={cardStyle}>
         <h2 style={{ ...chartTitleStyle, marginBottom: 12 }}>all trails</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', marginBottom: 16 }}>
+        <div className="filter-row">
           <label style={labelStyle}>
             State
             <SelectWrap value={stateFilter} onChange={e => setStateFilter(e.target.value)}>
@@ -331,7 +329,7 @@ export default function App() {
                 .map(r => <option key={r}>{r}</option>)}
             </SelectWrap>
           </label>
-          <label style={{ ...labelStyle, flexGrow: 1, maxWidth: 280 }}>
+          <label style={{ ...labelStyle, flexGrow: 1, maxWidth: 280 }} className="filter-search">
             Search
             <div style={{ position: 'relative' }}>
               <Search size={13} style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', color: '#6b6452' }} />
@@ -344,7 +342,7 @@ export default function App() {
               />
             </div>
           </label>
-          <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }}>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'flex-end' }} className="filter-actions">
             {(stateFilter !== 'All' || resortFilter !== 'All' || search) && (
               <button onClick={() => { setStateFilter('All'); setResortFilter('All'); setSearch(''); }} style={btnSecondary}>
                 Clear
@@ -361,19 +359,19 @@ export default function App() {
             <thead>
               <tr style={{ borderBottom: '1px solid #000' }}>
                 <Th label="Trail"      sortKey="name"       active={sortKey} dir={sortDir} onSort={toggleSort} />
-                <Th label="Resort"     sortKey="resort"     active={sortKey} dir={sortDir} onSort={toggleSort} />
-                <Th label="State"      sortKey="state"      active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <Th label="Resort"     sortKey="resort"     active={sortKey} dir={sortDir} onSort={toggleSort} className="col-resort" />
+                <Th label="State"      sortKey="state"      active={sortKey} dir={sortDir} onSort={toggleSort} className="col-state" />
                 <Th label="Difficulty" sortKey="difficulty" active={sortKey} dir={sortDir} onSort={toggleSort} />
                 <Th label="Score"      sortKey="score"      active={sortKey} dir={sortDir} onSort={toggleSort} />
-                <th style={thStyle}>Triggered words</th>
+                <th style={thStyle} className="col-hits">Triggered words</th>
               </tr>
             </thead>
             <tbody>
               {sorted.map((t, i) => (
                 <tr key={i} style={{ borderBottom: '1px solid #ddd' }}>
                   <td style={{ padding: '7px 12px' }}>{t.name}</td>
-                  <td style={{ padding: '7px 12px', color: '#666', whiteSpace: 'nowrap' }}>{t.resort}</td>
-                  <td style={{ padding: '7px 12px', color: '#666' }}>{t.state}</td>
+                  <td style={{ padding: '7px 12px', color: '#666', whiteSpace: 'nowrap' }} className="col-resort">{t.resort}</td>
+                  <td style={{ padding: '7px 12px', color: '#666' }} className="col-state">{t.state}</td>
                   <td style={{ padding: '7px 12px' }}>
                     <span style={{ display: 'inline-block', padding: '2px 7px', background: DIFFICULTY_COLOR[t.difficulty], color: 'white', fontSize: 11, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
                       {DIFFICULTY_LABEL[t.difficulty]}
@@ -382,7 +380,7 @@ export default function App() {
                   <td style={{ padding: '7px 12px', color: t.score > 0 ? '#3d8b5c' : t.score < 0 ? '#b8341a' : '#666' }}>
                     {t.score > 0 ? '+' : ''}{t.score}
                   </td>
-                  <td style={{ padding: '7px 12px', fontSize: 11 }}>
+                  <td style={{ padding: '7px 12px', fontSize: 11 }} className="col-hits">
                     {t.hits.length === 0
                       ? <span style={{ color: '#aaa' }}>—</span>
                       : t.hits.map((h, j) => (
@@ -426,10 +424,10 @@ function SelectWrap({ value, onChange, children }) {
   );
 }
 
-function Th({ label, sortKey, active, dir, onSort }) {
+function Th({ label, sortKey, active, dir, onSort, className }) {
   const isActive = active === sortKey;
   return (
-    <th onClick={() => onSort(sortKey)} style={{ ...thStyle, cursor: 'pointer', userSelect: 'none' }}>
+    <th onClick={() => onSort(sortKey)} style={{ ...thStyle, cursor: 'pointer', userSelect: 'none' }} className={className}>
       {label}
       {isActive && <ArrowUpDown size={11} style={{ marginLeft: 4, opacity: 0.6, transform: dir === 'desc' ? 'rotate(180deg)' : 'none', display: 'inline-block' }} />}
     </th>
