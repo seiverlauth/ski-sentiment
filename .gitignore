@@ -3,4 +3,6 @@ app/node_modules/
 app/dist/
 __pycache__/
 *.pyc
+*.md
+*.csv
 .DS_Store
