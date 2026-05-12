@@ -9,16 +9,6 @@ body {
   background-color: #f3f4f1;
   color: #000;
   padding: 2em;
-  filter: url(#grainy);
-}
-
-/* SVG grain filter */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
 }
 
 a { color: #000; text-decoration: none; }
@@ -28,5 +18,3 @@ button, select, input {
   font-family: ibm-plex-mono, monospace;
   font-size: 14px;
 }
-
-svg.grain-filter { position: fixed; width: 0; height: 0; }
