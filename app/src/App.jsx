@@ -1,0 +1,560 @@
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, Cell, ReferenceLine, ErrorBar,
+  ScatterChart, Scatter,
+} from 'recharts';
+import { Mountain, Search, Download, ArrowUpDown, ChevronDown, AlertCircle } from 'lucide-react';
+import { scoreTrail } from './lexicon.js';
+import { welchTest, formatP, cohenLabel, stdError } from './stats.js';
+
+// ── Constants ─────────────────────────────────────────────────────────────────
+
+const DIFFICULTY_ORDER = ['green', 'blue', 'black', 'double-black'];
+const DIFFICULTY_LABEL = {
+  green: 'Green Circle',
+  blue: 'Blue Square',
+  black: 'Black Diamond',
+  'double-black': 'Double Black',
+};
+const DIFFICULTY_X = { green: 1, blue: 2, black: 3, 'double-black': 4 };
+const DIFFICULTY_COLOR = {
+  green: '#3d8b5c',
+  blue: '#3a6fa8',
+  black: '#1a1a1a',
+  'double-black': '#b8341a',
+};
+
+// Deterministic jitter seeded by string hash
+function strHash(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h;
+}
+function jitter(name, diff) {
+  const h = strHash(name + diff);
+  return ((h & 0xffff) / 0xffff - 0.5) * 0.55;
+}
+
+// ── App ───────────────────────────────────────────────────────────────────────
+
+export default function App() {
+  const [rawTrails, setRawTrails] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Filters
+  const [resortFilter, setResortFilter] = useState('All');
+  const [stateFilter, setStateFilter] = useState('All');
+  const [search, setSearch] = useState('');
+
+  // Table sort
+  const [sortKey, setSortKey] = useState('score');
+  const [sortDir, setSortDir] = useState('asc');
+
+  // Load data
+  useEffect(() => {
+    fetch('/trails.json')
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(data => { setRawTrails(data); setLoading(false); })
+      .catch(e => { setError(e.message); setLoading(false); });
+  }, []);
+
+  // Score all trails (expensive, memoized once)
+  const scored = useMemo(() => {
+    return rawTrails.map(t => {
+      const { score, hits } = scoreTrail(t.name);
+      return { ...t, score, hits, x: DIFFICULTY_X[t.difficulty] + jitter(t.name, t.difficulty) };
+    });
+  }, [rawTrails]);
+
+  // Filter options
+  const resorts = useMemo(() => ['All', ...Array.from(new Set(scored.map(t => t.resort))).sort()], [scored]);
+  const states  = useMemo(() => ['All', ...Array.from(new Set(scored.map(t => t.state))).sort()], [scored]);
+
+  // Apply filters
+  const filtered = useMemo(() => {
+    let list = scored;
+    if (stateFilter !== 'All')  list = list.filter(t => t.state === stateFilter);
+    if (resortFilter !== 'All') list = list.filter(t => t.resort === resortFilter);
+    if (search.trim()) {
+      const q = search.trim().toLowerCase();
+      list = list.filter(t => t.name.toLowerCase().includes(q));
+    }
+    return list;
+  }, [scored, stateFilter, resortFilter, search]);
+
+  // Aggregates per tier for bar chart + stats panel
+  const aggregates = useMemo(() => {
+    return DIFFICULTY_ORDER.map(diff => {
+      const items = filtered.filter(t => t.difficulty === diff);
+      const scores = items.map(t => t.score);
+      const avg = scores.length ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
+      const se = stdError(scores);
+      return {
+        difficulty: diff,
+        label: DIFFICULTY_LABEL[diff],
+        avg: +avg.toFixed(2),
+        se: +se.toFixed(3),
+        count: items.length,
+        color: DIFFICULTY_COLOR[diff],
+      };
+    });
+  }, [filtered]);
+
+  // Statistical test: green vs black+double-black
+  const statsResult = useMemo(() => {
+    const greens = filtered.filter(t => t.difficulty === 'green').map(t => t.score);
+    const hard   = filtered.filter(t => t.difficulty === 'black' || t.difficulty === 'double-black').map(t => t.score);
+    return welchTest(greens, hard);
+  }, [filtered]);
+
+  // Sorted table
+  const sorted = useMemo(() => {
+    const list = [...filtered];
+    list.sort((a, b) => {
+      let av, bv;
+      if (sortKey === 'difficulty') { av = DIFFICULTY_X[a.difficulty]; bv = DIFFICULTY_X[b.difficulty]; }
+      else if (sortKey === 'score') { av = a.score; bv = b.score; }
+      else { av = String(a[sortKey] || '').toLowerCase(); bv = String(b[sortKey] || '').toLowerCase(); }
+      if (av < bv) return sortDir === 'asc' ? -1 : 1;
+      if (av > bv) return sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+    return list;
+  }, [filtered, sortKey, sortDir]);
+
+  function toggleSort(key) {
+    if (sortKey === key) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
+    else { setSortKey(key); setSortDir('asc'); }
+  }
+
+  // Export CSV
+  const exportCSV = useCallback(() => {
+    const header = 'name,resort,state,difficulty,score,hits';
+    const rows = sorted.map(t => {
+      const hits = t.hits.map(h => `${h.word}(${h.score})`).join(' ');
+      return [t.name, t.resort, t.state, t.difficulty, t.score, hits]
+        .map(v => `"${String(v).replace(/"/g, '""')}"`)
+        .join(',');
+    });
+    const csv = [header, ...rows].join('\n');
+    const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'ski-sentiment.csv';
+    a.click(); URL.revokeObjectURL(url);
+  }, [sorted]);
+
+  // Reset resort filter when state changes
+  useEffect(() => { setResortFilter('All'); }, [stateFilter]);
+
+  // ── Tooltips ────────────────────────────────────────────────────────────────
+
+  const ScatterTooltip = ({ active, payload }) => {
+    if (!active || !payload?.length) return null;
+    const d = payload[0].payload;
+    return (
+      <div style={tooltipStyle}>
+        <div style={{ fontWeight: 'bold', fontSize: 14 }}>{d.name}</div>
+        <div style={{ color: '#6b6452', fontSize: 11, fontStyle: 'italic' }}>{d.resort} · {d.state}</div>
+        <div style={{ marginTop: 4 }}>
+          <span style={{ color: DIFFICULTY_COLOR[d.difficulty] }}>● </span>
+          {DIFFICULTY_LABEL[d.difficulty]}
+        </div>
+        <div style={{ marginTop: 4, fontWeight: 'bold' }}>
+          Sentiment: {d.score > 0 ? '+' : ''}{d.score}
+        </div>
+        {d.hits.length > 0 && (
+          <div style={{ marginTop: 4, fontSize: 11, color: '#6b6452' }}>
+            {d.hits.map((h, i) => <span key={i}>{h.word} ({h.score > 0 ? '+' : ''}{h.score}){i < d.hits.length - 1 ? ', ' : ''}</span>)}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const BarTooltip = ({ active, payload }) => {
+    if (!active || !payload?.length) return null;
+    const d = payload[0].payload;
+    return (
+      <div style={tooltipStyle}>
+        <div style={{ fontWeight: 'bold' }}>{d.label}</div>
+        <div>Avg: {d.avg > 0 ? '+' : ''}{d.avg}</div>
+        <div style={{ fontSize: 11 }}>±{d.se} (SE) · n={d.count}</div>
+      </div>
+    );
+  };
+
+  // ── Render ───────────────────────────────────────────────────────────────────
+
+  if (loading) return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontStyle: 'italic', color: '#6b6452' }}>
+      Loading trail data…
+    </div>
+  );
+
+  if (error) return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', gap: 12 }}>
+      <AlertCircle size={32} color="#b8341a" />
+      <p style={{ color: '#b8341a' }}>Failed to load trails.json: {error}</p>
+      <p style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic' }}>Make sure trails.json is in app/public/ (run: cp ../data/trails.json public/)</p>
+    </div>
+  );
+
+  const scoreMin = Math.min(-5, ...filtered.map(t => t.score));
+  const scoreMax = Math.max(5, ...filtered.map(t => t.score));
+
+  return (
+    <div style={{ maxWidth: 1280, margin: '0 auto', padding: '32px 24px 64px' }}>
+
+      {/* ── HEADER ── */}
+      <header style={{ borderBottom: '3px double #2d3e2a', paddingBottom: 20, marginBottom: 28 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 4 }}>
+              <Mountain size={36} strokeWidth={1.5} />
+              <h1 style={{ fontSize: 40, fontWeight: 'normal', letterSpacing: '0.02em', fontVariant: 'small-caps' }}>
+                Trail Name Sentiment
+              </h1>
+            </div>
+            <p style={{ marginLeft: 48, fontStyle: 'italic', color: '#6b6452', fontSize: 14 }}>
+              Do bunny slopes sound friendlier than double diamonds? An empirical inquiry across {rawTrails.length.toLocaleString()} trails.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={badgeStyle}>{filtered.length.toLocaleString()} trails</span>
+            <button onClick={exportCSV} style={btnSecondary} title="Export filtered view as CSV">
+              <Download size={14} /> Export CSV
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ── FILTERS ── */}
+      <section style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 24, alignItems: 'center' }}>
+        <label style={labelStyle}>
+          State
+          <SelectWrap value={stateFilter} onChange={e => setStateFilter(e.target.value)}>
+            {states.map(s => <option key={s}>{s}</option>)}
+          </SelectWrap>
+        </label>
+        <label style={labelStyle}>
+          Resort
+          <SelectWrap value={resortFilter} onChange={e => setResortFilter(e.target.value)}>
+            {resorts
+              .filter(r => r === 'All' || stateFilter === 'All' || scored.some(t => t.resort === r && t.state === stateFilter))
+              .map(r => <option key={r}>{r}</option>)}
+          </SelectWrap>
+        </label>
+        <label style={{ ...labelStyle, flexGrow: 1, maxWidth: 320 }}>
+          Search
+          <div style={{ position: 'relative' }}>
+            <Search size={14} style={{ position: 'absolute', left: 8, top: '50%', transform: 'translateY(-50%)', color: '#6b6452' }} />
+            <input
+              type="text"
+              placeholder="Trail name…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              style={{ ...inputStyle, paddingLeft: 28, width: '100%' }}
+            />
+          </div>
+        </label>
+        {(stateFilter !== 'All' || resortFilter !== 'All' || search) && (
+          <button onClick={() => { setStateFilter('All'); setResortFilter('All'); setSearch(''); }} style={{ ...btnSecondary, alignSelf: 'flex-end' }}>
+            Clear
+          </button>
+        )}
+      </section>
+
+      {/* ── STICKY STATS PANEL ── */}
+      <div style={statsPanelStyle}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, flex: 1 }}>
+          {aggregates.map(a => (
+            <div key={a.difficulty} style={statsTileStyle(a.color)}>
+              <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: a.color, fontWeight: 'bold' }}>
+                {a.label}
+              </div>
+              <div style={{ fontSize: 28, color: a.avg > 0 ? '#3d8b5c' : a.avg < 0 ? '#b8341a' : '#6b6452', lineHeight: 1 }}>
+                {a.avg > 0 ? '+' : ''}{a.avg}
+              </div>
+              <div style={{ fontSize: 10, color: '#6b6452', fontStyle: 'italic' }}>n={a.count}</div>
+            </div>
+          ))}
+        </div>
+        {statsResult && (
+          <div style={statsResultStyle}>
+            <div style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6b6452', marginBottom: 4 }}>
+              Green vs. Black + Double-Black
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 'normal', lineHeight: 1.3 }}>
+              {formatP(statsResult.p)}
+            </div>
+            <div style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic', marginTop: 2 }}>
+              Welch&rsquo;s t = {statsResult.t.toFixed(2)}, df = {Math.round(statsResult.df)}
+            </div>
+            <div style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic' }}>
+              Cohen&rsquo;s d = {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)} effect)
+            </div>
+            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic', marginTop: 4 }}>
+              green avg {statsResult.meanA > 0 ? '+' : ''}{statsResult.meanA.toFixed(2)} · black avg {statsResult.meanB > 0 ? '+' : ''}{statsResult.meanB.toFixed(2)}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* ── CHARTS ── */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(440px, 1fr))', gap: 20, marginBottom: 24 }}>
+
+        {/* Bar chart */}
+        <div style={cardStyle}>
+          <h2 style={chartTitleStyle}>Average Sentiment by Tier</h2>
+          <p style={chartSubtitleStyle}>Error bars = ±1 standard error of the mean</p>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={aggregates} margin={{ top: 20, right: 20, bottom: 8, left: 0 }}>
+              <CartesianGrid strokeDasharray="2 4" stroke="#d4cab3" />
+              <XAxis dataKey="label" tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
+              <YAxis tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
+              <Tooltip content={<BarTooltip />} cursor={{ fill: 'rgba(45,62,42,0.04)' }} />
+              <ReferenceLine y={0} stroke="#2d3e2a" strokeWidth={1} />
+              <Bar dataKey="avg" radius={[2, 2, 0, 0]}>
+                {aggregates.map((a, i) => <Cell key={i} fill={a.color} />)}
+                <ErrorBar dataKey="se" width={6} strokeWidth={1.5} stroke="#2d3e2a" direction="y" />
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Scatter chart */}
+        <div style={cardStyle}>
+          <h2 style={chartTitleStyle}>Individual Trails</h2>
+          <p style={chartSubtitleStyle}>Hover for details. X-axis jittered to reduce overlap.</p>
+          <ResponsiveContainer width="100%" height={300}>
+            <ScatterChart margin={{ top: 20, right: 20, bottom: 8, left: 0 }}>
+              <CartesianGrid strokeDasharray="2 4" stroke="#d4cab3" />
+              <XAxis
+                type="number" dataKey="x" domain={[0.5, 4.5]}
+                ticks={[1, 2, 3, 4]}
+                tickFormatter={v => DIFFICULTY_LABEL[DIFFICULTY_ORDER[v - 1]] || ''}
+                tick={{ fill: '#2d3e2a', fontSize: 10, fontFamily: 'Georgia' }}
+                axisLine={{ stroke: '#2d3e2a' }}
+              />
+              <YAxis type="number" dataKey="score" domain={[scoreMin - 1, scoreMax + 1]}
+                tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
+              <Tooltip content={<ScatterTooltip />} cursor={{ strokeDasharray: '3 3', stroke: '#6b6452' }} />
+              <ReferenceLine y={0} stroke="#2d3e2a" strokeWidth={1} />
+              <Scatter data={filtered} shape={<DotShape />} />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+
+      {/* ── TABLE ── */}
+      <div style={cardStyle}>
+        <h2 style={{ ...chartTitleStyle, marginBottom: 16 }}>All Trails</h2>
+        <div style={{ overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #2d3e2a' }}>
+                <Th label="Trail"      sortKey="name"       active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <Th label="Resort"     sortKey="resort"     active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <Th label="State"      sortKey="state"      active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <Th label="Difficulty" sortKey="difficulty" active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <Th label="Score"      sortKey="score"      active={sortKey} dir={sortDir} onSort={toggleSort} />
+                <th style={thStyle}>Triggered words</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sorted.map((t, i) => (
+                <tr key={i} style={{ borderBottom: '1px dotted #d4cab3', background: i % 2 === 0 ? 'transparent' : 'rgba(45,62,42,0.018)' }}>
+                  <td style={{ padding: '7px 12px', fontWeight: 'bold' }}>{t.name}</td>
+                  <td style={{ padding: '7px 12px', color: '#6b6452', fontStyle: 'italic', whiteSpace: 'nowrap' }}>{t.resort}</td>
+                  <td style={{ padding: '7px 12px', color: '#6b6452' }}>{t.state}</td>
+                  <td style={{ padding: '7px 12px' }}>
+                    <span style={{ display: 'inline-block', padding: '2px 7px', background: DIFFICULTY_COLOR[t.difficulty], color: 'white', fontSize: 11, letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+                      {DIFFICULTY_LABEL[t.difficulty]}
+                    </span>
+                  </td>
+                  <td style={{ padding: '7px 12px', fontWeight: 'bold', color: t.score > 0 ? '#3d8b5c' : t.score < 0 ? '#b8341a' : '#6b6452' }}>
+                    {t.score > 0 ? '+' : ''}{t.score}
+                  </td>
+                  <td style={{ padding: '7px 12px', fontSize: 11 }}>
+                    {t.hits.length === 0
+                      ? <span style={{ color: '#aaa', fontStyle: 'italic' }}>—</span>
+                      : t.hits.map((h, j) => (
+                          <span key={j} style={{ display: 'inline-block', marginRight: 5, marginBottom: 2, padding: '1px 6px', background: h.score > 0 ? 'rgba(61,139,92,0.12)' : 'rgba(184,52,26,0.12)', border: `1px solid ${h.score > 0 ? '#3d8b5c' : '#b8341a'}`, fontSize: 10 }}>
+                            {h.word} {h.score > 0 ? '+' : ''}{h.score}
+                          </span>
+                        ))
+                    }
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <footer style={{ marginTop: 32, paddingTop: 16, borderTop: '1px solid #d4cab3', fontSize: 11, color: '#6b6452', fontStyle: 'italic', textAlign: 'center' }}>
+        Source: OpenSkiMap (OpenStreetMap data) · Lexicon: ~170 ski-domain terms · 25 US resorts
+      </footer>
+    </div>
+  );
+}
+
+// ── Sub-components ────────────────────────────────────────────────────────────
+
+function DotShape(props) {
+  const { cx, cy, payload } = props;
+  if (!cx || !cy) return null;
+  return <circle cx={cx} cy={cy} r={3.5} fill={DIFFICULTY_COLOR[payload.difficulty]} fillOpacity={0.7} stroke="none" />;
+}
+
+function SelectWrap({ value, onChange, children }) {
+  return (
+    <div style={{ position: 'relative' }}>
+      <select value={value} onChange={onChange} style={selectStyle}>
+        {children}
+      </select>
+      <ChevronDown size={13} style={{ position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: '#2d3e2a' }} />
+    </div>
+  );
+}
+
+function Th({ label, sortKey, active, dir, onSort }) {
+  const isActive = active === sortKey;
+  return (
+    <th onClick={() => onSort(sortKey)} style={{ ...thStyle, cursor: 'pointer', userSelect: 'none' }}>
+      {label}
+      {isActive && <ArrowUpDown size={11} style={{ marginLeft: 4, opacity: 0.6, transform: dir === 'desc' ? 'rotate(180deg)' : 'none', display: 'inline-block' }} />}
+    </th>
+  );
+}
+
+// ── Styles ───────────────────────────────────────────────────────────────────
+
+const cardStyle = {
+  background: 'white',
+  border: '1px solid #2d3e2a',
+  padding: '20px 20px 16px',
+  marginBottom: 0,
+};
+
+const chartTitleStyle = {
+  fontSize: 15,
+  fontWeight: 'normal',
+  fontVariant: 'small-caps',
+  letterSpacing: '0.05em',
+  marginBottom: 2,
+};
+
+const chartSubtitleStyle = {
+  fontSize: 11,
+  color: '#6b6452',
+  fontStyle: 'italic',
+  marginBottom: 16,
+};
+
+const tooltipStyle = {
+  background: '#f5efe0',
+  border: '1px solid #2d3e2a',
+  padding: '10px 14px',
+  fontFamily: 'Georgia, serif',
+  fontSize: 13,
+  boxShadow: '2px 2px 0 #2d3e2a',
+  maxWidth: 260,
+};
+
+const badgeStyle = {
+  background: '#2d3e2a',
+  color: '#f5efe0',
+  padding: '4px 12px',
+  fontSize: 13,
+  fontStyle: 'italic',
+  letterSpacing: '0.03em',
+};
+
+const btnSecondary = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 5,
+  padding: '6px 12px',
+  background: 'transparent',
+  border: '1px solid #2d3e2a',
+  fontFamily: 'inherit',
+  fontSize: 12,
+  color: '#2d3e2a',
+};
+
+const inputStyle = {
+  padding: '7px 10px',
+  border: '1px solid #2d3e2a',
+  background: '#fafaf3',
+  fontFamily: 'inherit',
+  fontSize: 13,
+  color: '#2d3e2a',
+  width: '100%',
+};
+
+const selectStyle = {
+  padding: '7px 28px 7px 10px',
+  border: '1px solid #2d3e2a',
+  background: '#fafaf3',
+  fontFamily: 'inherit',
+  fontSize: 13,
+  color: '#2d3e2a',
+  appearance: 'none',
+  width: '100%',
+};
+
+const labelStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 4,
+  fontSize: 11,
+  letterSpacing: '0.08em',
+  textTransform: 'uppercase',
+  color: '#6b6452',
+  minWidth: 140,
+};
+
+const thStyle = {
+  textAlign: 'left',
+  padding: '8px 12px',
+  fontWeight: 'normal',
+  fontVariant: 'small-caps',
+  letterSpacing: '0.06em',
+  fontSize: 13,
+  whiteSpace: 'nowrap',
+};
+
+const statsPanelStyle = {
+  position: 'sticky',
+  top: 0,
+  zIndex: 100,
+  background: '#f5efe0',
+  borderTop: '2px solid #2d3e2a',
+  borderBottom: '2px solid #2d3e2a',
+  marginBottom: 24,
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: 0,
+  boxShadow: '0 2px 8px rgba(45,62,42,0.12)',
+};
+
+function statsTileStyle(color) {
+  return {
+    padding: '12px 20px',
+    borderRight: '1px solid #d4cab3',
+    minWidth: 100,
+    flex: '1 0 auto',
+  };
+}
+
+const statsResultStyle = {
+  padding: '12px 20px',
+  borderLeft: '2px solid #2d3e2a',
+  background: 'white',
+  minWidth: 220,
+};

@@ -1,0 +1,28 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IM Fell English', Georgia, 'Times New Roman', serif;
+  background: #f5efe0;
+  color: #2d3e2a;
+  min-height: 100vh;
+}
+
+/* Subtle graph-paper grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(45,62,42,0.035) 40px, rgba(45,62,42,0.035) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(45,62,42,0.035) 40px, rgba(45,62,42,0.035) 41px);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+button { cursor: pointer; }
+select, input { font-family: inherit; }

@@ -1,0 +1,1045 @@
+resort,name,osm_difficulty,reason
+Vail,,novice,missing_name
+Vail,,intermediate,missing_name
+Vail,38,advanced,numeric_or_artifact_name
+Vail,Vail Village Catwalk - Middle,easy,duplicate_within_resort
+Vail,Wow,advanced,duplicate_within_resort
+Vail,Born Free,easy,duplicate_within_resort
+Vail,Simba,intermediate,duplicate_within_resort
+Vail,Bear Tree,intermediate,duplicate_within_resort
+Vail,,novice,missing_name
+Vail,Game Trail,easy,duplicate_within_resort
+Vail,Wild Card,advanced,duplicate_within_resort
+Vail,Boomer,easy,duplicate_within_resort
+Vail,,intermediate,missing_name
+Vail,Born Free,intermediate,duplicate_within_resort
+Vail,,novice,missing_name
+Vail,Sleepytime Road,intermediate,duplicate_within_resort
+Vail,Ramshorn,intermediate,duplicate_within_resort
+Vail,Sleepytime Road,intermediate,duplicate_within_resort
+Vail,Tin Pants,easy,duplicate_within_resort
+Vail,Windows Road,advanced,duplicate_within_resort
+Vail,,intermediate,missing_name
+Vail,Bolshoi Ballroom,advanced,duplicate_within_resort
+Vail,Chaos Canyon,intermediate,duplicate_within_resort
+Vail,Inner Mongolia Bowl,advanced,duplicate_within_resort
+Vail,Kangaroo Cornice,advanced,duplicate_within_resort
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Beaver Creek,,intermediate,missing_name
+Beaver Creek,,missing,missing_name
+Beaver Creek,1876,intermediate,numeric_or_artifact_name
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Beaver Creek,Everkrisp,easy,duplicate_within_resort
+Beaver Creek,Powell,easy,duplicate_within_resort
+Beaver Creek,,missing,missing_name
+Beaver Creek,,missing,missing_name
+Beaver Creek,Ridge Runner,intermediate,duplicate_within_resort
+Beaver Creek,,easy,missing_name
+Beaver Creek,Everkrisp,easy,duplicate_within_resort
+Beaver Creek,,advanced,missing_name
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Beaver Creek,,easy,missing_name
+Beaver Creek,Ridge Runner,intermediate,duplicate_within_resort
+Beaver Creek,Cinch-Lower,easy,duplicate_within_resort
+Beaver Creek,,advanced,missing_name
+Beaver Creek,,missing,missing_name
+Beaver Creek,,missing,missing_name
+Beaver Creek,Latigo-Lower,intermediate,duplicate_within_resort
+Beaver Creek,Primrose,easy,duplicate_within_resort
+Beaver Creek,Dally,easy,duplicate_within_resort
+Beaver Creek,Everkrisp,easy,duplicate_within_resort
+Beaver Creek,,missing,missing_name
+Beaver Creek,Intertwine,easy,duplicate_within_resort
+Beaver Creek,,advanced,missing_name
+Beaver Creek,Intertwine,easy,duplicate_within_resort
+Beaver Creek,Leave the Beav,easy,duplicate_within_resort
+Beaver Creek,Bitterroot,intermediate,duplicate_within_resort
+Beaver Creek,Everkrisp,easy,duplicate_within_resort
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Beaver Creek,Roughlock,intermediate,duplicate_within_resort
+Breckenridge,,intermediate,missing_name
+Breckenridge,,easy,missing_name
+Breckenridge,,easy,missing_name
+Breckenridge,Beaver Meadows,intermediate,duplicate_within_resort
+Breckenridge,Troll Forest,easy,duplicate_within_resort
+Breckenridge,needles eye,expert,duplicate_within_resort
+Breckenridge,Cool Whip,intermediate,duplicate_within_resort
+Breckenridge,,intermediate,missing_name
+Breckenridge,Morning Glory,intermediate,duplicate_within_resort
+Breckenridge,Shock Hill,advanced,duplicate_within_resort
+Breckenridge,"Cool Whip, Willow",intermediate,duplicate_within_resort
+Breckenridge,Lower Sawmill,easy,duplicate_within_resort
+Breckenridge,Beaver Meadows,intermediate,duplicate_within_resort
+Breckenridge,Get Away,advanced,duplicate_within_resort
+Breckenridge,Gluteus Maximus,intermediate,duplicate_within_resort
+Breckenridge,,easy,missing_name
+Breckenridge,,intermediate,missing_name
+Breckenridge,Lower Sawmill,easy,duplicate_within_resort
+Breckenridge,Troll Forest,easy,duplicate_within_resort
+Breckenridge,Peak 6 Parkway,intermediate,duplicate_within_resort
+Breckenridge,Beaver Meadows,intermediate,duplicate_within_resort
+Breckenridge,Troll Forest,easy,duplicate_within_resort
+Breckenridge,"Shock Hill, Pence Miller",advanced,duplicate_within_resort
+Breckenridge,Claimjumper,intermediate,duplicate_within_resort
+Breckenridge,"Shock Hill, Pence Miller",advanced,duplicate_within_resort
+Breckenridge,Get Away,advanced,duplicate_within_resort
+Breckenridge,Claimjumper,intermediate,duplicate_within_resort
+Breckenridge,,intermediate,missing_name
+Breckenridge,Wirepatch,intermediate,duplicate_within_resort
+Breckenridge,Columbine,intermediate,duplicate_within_resort
+Breckenridge,Eldorado Terrain Park,missing,unmappable_difficulty:missing
+Breckenridge,Sawmill,easy,duplicate_within_resort
+Breckenridge,"Troll Forest, Little Red's Run",intermediate,duplicate_within_resort
+Breckenridge,Cimarron,advanced,duplicate_within_resort
+Breckenridge,New Nordic World,intermediate,duplicate_within_resort
+Breckenridge,union,intermediate,duplicate_within_resort
+Breckenridge,Wirepatch,intermediate,duplicate_within_resort
+Breckenridge,Lowest 4 O'Clock,easy,duplicate_within_resort
+Breckenridge,Cool Whip,intermediate,duplicate_within_resort
+Breckenridge,Silverthorne,easy,duplicate_within_resort
+Breckenridge,Twister,easy,duplicate_within_resort
+Breckenridge,,easy,missing_name
+Breckenridge,Lower 4 O'Clock,easy,duplicate_within_resort
+Breckenridge,Lower 4 O'Clock,easy,duplicate_within_resort
+Keystone,,intermediate,missing_name
+Keystone,Flying Dutchman,intermediate,duplicate_within_resort
+Keystone,Flying Dutchman,intermediate,duplicate_within_resort
+Keystone,,advanced,missing_name
+Keystone,South Bowl Trees,missing,unmappable_difficulty:missing
+Keystone,Prospector,missing,unmappable_difficulty:missing
+Keystone,Lower Prospector,easy,duplicate_within_resort
+Keystone,Bergman road,intermediate,duplicate_within_resort
+Keystone,Anticipation,missing,unmappable_difficulty:missing
+Keystone,Prospector,intermediate,duplicate_within_resort
+Aspen Snowmass,,intermediate,missing_name
+Aspen Snowmass,Turkey Trot,intermediate,duplicate_within_resort
+Aspen Snowmass,Turkey Trot,intermediate,duplicate_within_resort
+Aspen Snowmass,,easy,missing_name
+Aspen Snowmass,,intermediate,missing_name
+Aspen Snowmass,,intermediate,missing_name
+Aspen Snowmass,,easy,missing_name
+Aspen Snowmass,,advanced,missing_name
+Aspen Snowmass,,easy,missing_name
+Aspen Snowmass,,advanced,missing_name
+Aspen Snowmass,S1,expert,numeric_or_artifact_name
+Aspen Snowmass,Blondie's,advanced,duplicate_within_resort
+Aspen Snowmass,America's Downhill,missing,unmappable_difficulty:missing
+Aspen Snowmass,Percy,advanced,duplicate_within_resort
+Aspen Snowmass,Gent's Ridge,advanced,duplicate_within_resort
+Aspen Snowmass,,intermediate,missing_name
+Aspen Snowmass,Bell Meadow,advanced,duplicate_within_resort
+Aspen Snowmass,Face of Bell,advanced,duplicate_within_resort
+Aspen Snowmass,Dipsy Doodle,intermediate,duplicate_within_resort
+Aspen Snowmass,Lower Little Nell,intermediate,duplicate_within_resort
+Aspen Snowmass,Face of Bell,advanced,duplicate_within_resort
+Aspen Snowmass,Upper Roch Run,intermediate,duplicate_within_resort
+Aspen Snowmass,Dipsy Doodle,intermediate,duplicate_within_resort
+Aspen Snowmass,Gretl's,intermediate,duplicate_within_resort
+Aspen Snowmass,1 & 2 Leaf,intermediate,duplicate_within_resort
+Aspen Snowmass,Face of Bell,advanced,duplicate_within_resort
+Aspen Snowmass,FIS Trail,advanced,duplicate_within_resort
+Aspen Snowmass,Cutoff,intermediate,duplicate_within_resort
+Aspen Snowmass,Ruthie's Run,intermediate,duplicate_within_resort
+Aspen Snowmass,Bell Meadow,advanced,duplicate_within_resort
+Aspen Snowmass,Kessler's,expert,duplicate_within_resort
+Aspen Snowmass,Jerome,intermediate,duplicate_within_resort
+Aspen Snowmass,Sherwood Forest,advanced,duplicate_within_resort
+Aspen Snowmass,Sherwood Forest,advanced,duplicate_within_resort
+Aspen Snowmass,Jerome,intermediate,duplicate_within_resort
+Aspen Snowmass,Deane's,intermediate,duplicate_within_resort
+Aspen Snowmass,Thunderbowl,intermediate,duplicate_within_resort
+Aspen Snowmass,St. Moritz,expert,duplicate_within_resort
+Aspen Snowmass,Lucky Find,expert,duplicate_within_resort
+Aspen Snowmass,Teaser,intermediate,duplicate_within_resort
+Aspen Snowmass,Sterner Gulch,intermediate,duplicate_within_resort
+Aspen Snowmass,Lower Savio,intermediate,duplicate_within_resort
+Aspen Snowmass,Ptarmigan,intermediate,duplicate_within_resort
+Aspen Snowmass,,intermediate,missing_name
+Aspen Snowmass,Buckskin,intermediate,duplicate_within_resort
+Steamboat,,advanced,missing_name
+Steamboat,Royal Flush,advanced,duplicate_within_resort
+Steamboat,Swinger,easy,duplicate_within_resort
+Steamboat,,missing,missing_name
+Steamboat,,missing,missing_name
+Steamboat,Alarm CLock,advanced,duplicate_within_resort
+Steamboat,,intermediate,missing_name
+Steamboat,Diamond Hitch,advanced,duplicate_within_resort
+Steamboat,Rendezvous Way,easy,duplicate_within_resort
+Steamboat,BC Liftline,missing,unmappable_difficulty:missing
+Steamboat,Wapiti,intermediate,duplicate_within_resort
+Steamboat,Giggle Gulch,easy,duplicate_within_resort
+Steamboat,Sunnyside,missing,unmappable_difficulty:missing
+Steamboat,Sideburn,advanced,duplicate_within_resort
+Steamboat,Giggle Gulch,easy,duplicate_within_resort
+Steamboat,Heavenly Daze,missing,unmappable_difficulty:missing
+Steamboat,Traverse,intermediate,duplicate_within_resort
+Crested Butte,Ten Peaks Progression Park,missing,unmappable_difficulty:missing
+Crested Butte,Smith Hill Terrain Park,missing,unmappable_difficulty:missing
+Crested Butte,,easy,missing_name
+Crested Butte,,intermediate,missing_name
+Crested Butte,,easy,missing_name
+Crested Butte,L. Keystone Jib Park,missing,unmappable_difficulty:missing
+Crested Butte,Upper Park,intermediate,duplicate_within_resort
+Telluride,,advanced,missing_name
+Telluride,Misty Maiden,intermediate,duplicate_within_resort
+Telluride,Skunk Creek Trails,intermediate,duplicate_within_resort
+Telluride,Bike 'n Hike Trail,easy,duplicate_within_resort
+Telluride,Skunk Creek Trails,intermediate,duplicate_within_resort
+Telluride,Ophir Loop,intermediate,duplicate_within_resort
+Telluride,Ophir Loop,intermediate,duplicate_within_resort
+Telluride,Butterfly,intermediate,duplicate_within_resort
+Telluride,Misty Maiden,intermediate,duplicate_within_resort
+Telluride,Loop 1,easy,duplicate_within_resort
+Telluride,Cake Walk,intermediate,duplicate_within_resort
+Telluride,Bike 'n Hike Trail,easy,duplicate_within_resort
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Sandia,intermediate,duplicate_within_resort
+Telluride,Lower Boomerang,easy,duplicate_within_resort
+Telluride,Magic Meadow Loop,intermediate,duplicate_within_resort
+Telluride,Skunk Creek Trails,intermediate,duplicate_within_resort
+Telluride,Loop 8,easy,duplicate_within_resort
+Telluride,Woozley's Way,intermediate,duplicate_within_resort
+Telluride,See Forever,intermediate,duplicate_within_resort
+Telluride,Peek-A-Boo,intermediate,duplicate_within_resort
+Telluride,Lynx Loop,intermediate,duplicate_within_resort
+Telluride,Stumper,advanced,duplicate_within_resort
+Telluride,Lower Galloping Goose,missing,unmappable_difficulty:missing
+Telluride,Cake Walk,intermediate,duplicate_within_resort
+Telluride,Ute Park,easy,duplicate_within_resort
+Telluride,Bike 'n Hike Trail,easy,duplicate_within_resort
+Telluride,West Drain,expert,duplicate_within_resort
+Telluride,Loop 5,easy,duplicate_within_resort
+Telluride,The Plunge,advanced,duplicate_within_resort
+Telluride,,expert,missing_name
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Loop 1,easy,duplicate_within_resort
+Telluride,Ute Park,easy,duplicate_within_resort
+Telluride,Campbell Peak View Trail,easy,duplicate_within_resort
+Telluride,See Forever,intermediate,duplicate_within_resort
+Telluride,Humbolt Draw,intermediate,duplicate_within_resort
+Telluride,Magnolia,intermediate,duplicate_within_resort
+Telluride,Lynx Loop,intermediate,duplicate_within_resort
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Loop 4,easy,duplicate_within_resort
+Telluride,Logpile,advanced,duplicate_within_resort
+Telluride,Woozley's Way,intermediate,duplicate_within_resort
+Telluride,Madison,easy,duplicate_within_resort
+Telluride,Cake Walk,intermediate,duplicate_within_resort
+Telluride,West Drain,advanced,duplicate_within_resort
+Telluride,Bushwacker,advanced,duplicate_within_resort
+Telluride,Madison,easy,duplicate_within_resort
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Bailout,advanced,duplicate_within_resort
+Telluride,Loop 5,easy,duplicate_within_resort
+Telluride,Ophir Loop,intermediate,duplicate_within_resort
+Telluride,Bike 'n Hike Trail,easy,duplicate_within_resort
+Telluride,Lynx Loop,intermediate,duplicate_within_resort
+Telluride,Village Bypass,easy,duplicate_within_resort
+Telluride,Woozley's Way,intermediate,duplicate_within_resort
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Pick'N Gad,intermediate,duplicate_within_resort
+Telluride,Rockslide,expert,duplicate_within_resort
+Telluride,Double Eagle Loop,easy,duplicate_within_resort
+Telluride,Ophir Loop,intermediate,duplicate_within_resort
+Telluride,Skunk Creek Trails,advanced,duplicate_within_resort
+Telluride,Cats Paw,expert,duplicate_within_resort
+Telluride,Village Bypass,easy,duplicate_within_resort
+Telluride,Lower Boomerang,easy,duplicate_within_resort
+Telluride,Misty Maiden,intermediate,duplicate_within_resort
+Telluride,Elk Crossing Trail,advanced,duplicate_within_resort
+Telluride,Elk Crossing Trail,advanced,duplicate_within_resort
+Telluride,Logpile,advanced,duplicate_within_resort
+Telluride,Magic Meadow Loop,intermediate,duplicate_within_resort
+Telluride,Wilson Loop,easy,duplicate_within_resort
+Telluride,Wilson Loop,easy,duplicate_within_resort
+Telluride,Boulevard,easy,duplicate_within_resort
+Telluride,,easy,missing_name
+Telluride,Meadows,easy,duplicate_within_resort
+Telluride,Loop 9,easy,duplicate_within_resort
+Telluride,Bailout,advanced,duplicate_within_resort
+Telluride,Bike 'n Hike Trail,easy,duplicate_within_resort
+Telluride,May Girl,easy,duplicate_within_resort
+Telluride,Elk Crossing Trail,advanced,duplicate_within_resort
+Telluride,Campbell Peak View Trail,easy,duplicate_within_resort
+Telluride,Loop 3,easy,duplicate_within_resort
+Telluride,See Forever,intermediate,duplicate_within_resort
+Telluride,May Girl,easy,duplicate_within_resort
+Telluride,,easy,missing_name
+Telluride,Skunk Creek Trails,intermediate,duplicate_within_resort
+Telluride,Boomerang,intermediate,duplicate_within_resort
+Telluride,Lynx Loop,intermediate,duplicate_within_resort
+Telluride,Bushwacker,advanced,duplicate_within_resort
+Telluride,Logpile,advanced,duplicate_within_resort
+Telluride,Boomerang Loop,intermediate,duplicate_within_resort
+Telluride,Ute Park,novice,duplicate_within_resort
+Telluride,Boomerang Loop,intermediate,duplicate_within_resort
+Telluride,Boomerang Loop,advanced,duplicate_within_resort
+Telluride,Dew Drop,intermediate,duplicate_within_resort
+Telluride,Bailout,advanced,duplicate_within_resort
+Telluride,Meadows,easy,duplicate_within_resort
+Telluride,Boulevard,intermediate,duplicate_within_resort
+Winter Park,,intermediate,missing_name
+Winter Park,,missing,missing_name
+Winter Park,,missing,missing_name
+Winter Park,,intermediate,missing_name
+Winter Park,Engeldive,advanced,duplicate_within_resort
+Winter Park,Village Way,easy,duplicate_within_resort
+Winter Park,Dormouse,easy,duplicate_within_resort
+Winter Park,Village Way,easy,duplicate_within_resort
+Winter Park,Parry's Peek,intermediate,duplicate_within_resort
+Winter Park,Village Way,easy,duplicate_within_resort
+Winter Park,,missing,missing_name
+Winter Park,,missing,missing_name
+Winter Park,,missing,missing_name
+Winter Park,Cranmer,intermediate,duplicate_within_resort
+Winter Park,Roundhouse,intermediate,duplicate_within_resort
+Winter Park,Forever Eva,intermediate,duplicate_within_resort
+Winter Park,Runaway,advanced,duplicate_within_resort
+Winter Park,Wildwood Glade,intermediate,duplicate_within_resort
+Winter Park,Cranmer,intermediate,duplicate_within_resort
+Winter Park,Bellmar Bowl,intermediate,duplicate_within_resort
+Winter Park,,intermediate,missing_name
+Winter Park,,missing,missing_name
+Copper Mountain,Coppertone,easy,duplicate_within_resort
+Copper Mountain,,easy,missing_name
+Copper Mountain,Green Acres,novice,duplicate_within_resort
+Copper Mountain,Green Acres,novice,duplicate_within_resort
+Copper Mountain,Sno-Deal,intermediate,duplicate_within_resort
+Copper Mountain,Ptarmigan,intermediate,duplicate_within_resort
+Copper Mountain,Green Acres,easy,duplicate_within_resort
+Copper Mountain,American Flyer,intermediate,duplicate_within_resort
+Copper Mountain,Lower Enchanted Forest,advanced,duplicate_within_resort
+Copper Mountain,High Point,easy,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,expert,missing_name
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,Town,intermediate,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,,easy,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,easy,missing_name
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,,missing,missing_name
+Park City,002,intermediate,numeric_or_artifact_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,East Face,expert,duplicate_within_resort
+Park City,,intermediate,missing_name
+Park City,,missing,missing_name
+Park City,Flat Iron,easy,duplicate_within_resort
+Park City,,easy,missing_name
+Park City,Town,intermediate,duplicate_within_resort
+Park City,,intermediate,missing_name
+Park City,"McLeod Creek Nordic Trail, McLeod Creek",easy,duplicate_within_resort
+Park City,Armstrong Nordic Trail,easy,duplicate_within_resort
+Park City,"McLeod Creek Nordic Trail, McLeod Creek",easy,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,Backstreet,intermediate,duplicate_within_resort
+Park City,Upper MAinline,easy,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,Off Ramp,missing,unmappable_difficulty:missing
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,Ollie Lolly Nordic Trail,intermediate,duplicate_within_resort
+Park City,,expert,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,Thaynes Canyon,intermediate,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,,easy,missing_name
+Park City,,missing,missing_name
+Park City,Willow Creek Access Nordic Trail,easy,duplicate_within_resort
+Park City,McLeod Creek Nordic Trail,easy,duplicate_within_resort
+Park City,,intermediate,missing_name
+Park City,,missing,missing_name
+Park City,,easy,missing_name
+Park City,,easy,missing_name
+Park City,,missing,missing_name
+Park City,"McLeod Creek Nordic Trail, McLeod Creek",easy,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,intermediate,missing_name
+Park City,,intermediate,missing_name
+Park City,,intermediate,missing_name
+Park City,,missing,missing_name
+Park City,Backstreet,intermediate,duplicate_within_resort
+Park City,Molly's,expert,duplicate_within_resort
+Park City,Jupiter Access,intermediate,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Park City,Road D.O.,intermediate,duplicate_within_resort
+Park City,,missing,missing_name
+Park City,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Home Run,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,intermediate,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Green Monster,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Age of Reason,intermediate,duplicate_within_resort
+Deer Valley,Custer,easy,duplicate_within_resort
+Deer Valley,Pioche,intermediate,duplicate_within_resort
+Deer Valley,,intermediate,missing_name
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Carbenite,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,Crest Ridge,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Trump,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Carbenite,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,Ontario,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Lost Boulder,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Hidden Treasure,intermediate,duplicate_within_resort
+Deer Valley,Green Monster,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,Magnolia,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Home Run,intermediate,duplicate_within_resort
+Deer Valley,,intermediate,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,Pioche,intermediate,duplicate_within_resort
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,Home Run,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,Connector,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,Custer,easy,duplicate_within_resort
+Deer Valley,Ridge Cross,intermediate,duplicate_within_resort
+Deer Valley,,intermediate,missing_name
+Deer Valley,Connector,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Pioche,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Gnat's Eye,easy,duplicate_within_resort
+Deer Valley,Ridge Cross,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Connector,intermediate,duplicate_within_resort
+Deer Valley,Home Run,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Green Monster,easy,duplicate_within_resort
+Deer Valley,Trainer,easy,duplicate_within_resort
+Deer Valley,Clipper,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Mayflower Link,easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Lost Fawn,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,Clipper,easy,duplicate_within_resort
+Deer Valley,McHenry,easy,duplicate_within_resort
+Deer Valley,Solace,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Crest Ridge,intermediate,duplicate_within_resort
+Deer Valley,,easy,missing_name
+Deer Valley,,easy,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,,intermediate,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,"Green Monster, Carbenite",easy,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Pioche,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Deer Valley,,missing,missing_name
+Deer Valley,Connector,intermediate,duplicate_within_resort
+Deer Valley,,missing,missing_name
+Snowbird,,missing,missing_name
+Snowbird,,intermediate,missing_name
+Snowbird,,missing,missing_name
+Snowbird,Lautrenoe,intermediate,duplicate_within_resort
+Snowbird,,intermediate,missing_name
+Snowbird,,intermediate,missing_name
+Snowbird,Chip's Bypass,intermediate,duplicate_within_resort
+Snowbird,,missing,missing_name
+Snowbird,,missing,missing_name
+Snowbird,,advanced,missing_name
+Snowbird,Gadzooks,advanced,duplicate_within_resort
+Snowbird,,advanced,missing_name
+Snowbird,Upper Chip's Run,intermediate,duplicate_within_resort
+Snowbird,Bassanova,intermediate,duplicate_within_resort
+Snowbird,Miner's Road,easy,duplicate_within_resort
+Snowbird,Upper Big Emma,intermediate,duplicate_within_resort
+Snowbird,Miner's Road,easy,duplicate_within_resort
+Snowbird,Regulator Johnson,advanced,duplicate_within_resort
+Snowbird,,advanced,missing_name
+Snowbird,,missing,missing_name
+Snowbird,,intermediate,missing_name
+Snowbird,Chamonix Bowl,advanced,duplicate_within_resort
+Snowbird,Bananas,intermediate,duplicate_within_resort
+Snowbird,Upper Big Emma,intermediate,duplicate_within_resort
+Snowbird,Middle Cirque,advanced,duplicate_within_resort
+Snowbird,Regulator Johnson,advanced,duplicate_within_resort
+Snowbird,,intermediate,missing_name
+Snowbird,Upper Big Emma,intermediate,duplicate_within_resort
+Snowbird,,intermediate,missing_name
+Alta,,intermediate,missing_name
+Alta,Rock 'n Roll,intermediate,duplicate_within_resort
+Alta,,intermediate,missing_name
+Alta,,missing,missing_name
+Alta,,advanced,missing_name
+Alta,,missing,missing_name
+Alta,,missing,missing_name
+Alta,,missing,missing_name
+Alta,,advanced,missing_name
+Alta,,easy,missing_name
+Alta,Westward Ho,advanced,duplicate_within_resort
+Alta,,missing,missing_name
+Alta,,missing,missing_name
+Alta,,missing,missing_name
+Alta,,easy,missing_name
+Alta,Vicky's,missing,unmappable_difficulty:missing
+Alta,,missing,missing_name
+Alta,,missing,missing_name
+Alta,Big Dipper,intermediate,duplicate_within_resort
+Alta,,intermediate,missing_name
+Alta,,missing,missing_name
+Alta,,easy,missing_name
+Alta,Crooked Mile,easy,duplicate_within_resort
+Brighton,Canyon,easy,duplicate_within_resort
+Brighton,,intermediate,missing_name
+Brighton,,advanced,missing_name
+Brighton,,easy,missing_name
+Brighton,Western Trail,intermediate,duplicate_within_resort
+Brighton,,easy,missing_name
+Brighton,,easy,missing_name
+Brighton,Canyon,easy,duplicate_within_resort
+Brighton,Backdoor,easy,duplicate_within_resort
+Brighton,,intermediate,missing_name
+Brighton,,intermediate,missing_name
+Brighton,,advanced,missing_name
+Brighton,,easy,missing_name
+Brighton,,intermediate,missing_name
+Brighton,Easy Out,intermediate,duplicate_within_resort
+Brighton,,advanced,missing_name
+Brighton,Scout,intermediate,duplicate_within_resort
+Brighton,Western Trail,intermediate,duplicate_within_resort
+Brighton,Evergreen,advanced,duplicate_within_resort
+Brighton,,easy,missing_name
+Brighton,Easy Out,intermediate,duplicate_within_resort
+Brighton,,advanced,missing_name
+Brighton,,expert,missing_name
+Brighton,Backdoor,easy,duplicate_within_resort
+Brighton,Pioneer,intermediate,duplicate_within_resort
+Solitude,Diamond Lane,advanced,duplicate_within_resort
+Solitude,,intermediate,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,advanced,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,Hanging Rock,intermediate,duplicate_within_resort
+Jackson Hole,Lower Werner,easy,duplicate_within_resort
+Jackson Hole,Jackson Face,advanced,duplicate_within_resort
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,advanced,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,Hanging Rock,intermediate,duplicate_within_resort
+Jackson Hole,,advanced,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,North Hoback,advanced,duplicate_within_resort
+Jackson Hole,,advanced,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,Grand,intermediate,duplicate_within_resort
+Jackson Hole,,easy,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,Bronco,easy,duplicate_within_resort
+Jackson Hole,Jackson Face,advanced,duplicate_within_resort
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,Solitude Way,easy,duplicate_within_resort
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,Laramie Traverse,intermediate,duplicate_within_resort
+Jackson Hole,Antelope Flats,easy,duplicate_within_resort
+Jackson Hole,,easy,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,easy,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,,intermediate,missing_name
+Jackson Hole,Beaver Tooth,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,expert,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Class 4,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Fast Lane,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Bluebird,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Rips,extreme,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Skittles Road,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,Screaming Left,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Chuckles,intermediate,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,Elkhorn,intermediate,duplicate_within_resort
+Big Sky,Horseshoe,intermediate,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,Otter Slide,extreme,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Fast Lane,intermediate,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,White Wing,easy,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,Yaak,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,Wagon Train,easy,duplicate_within_resort
+Big Sky,Marshall,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Robbie's Runout,intermediate,duplicate_within_resort
+Big Sky,Outlook Way,easy,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,Otter Slide,extreme,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Class 4,advanced,duplicate_within_resort
+Big Sky,Middle River,easy,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,Elkhorn,advanced,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Skittles Road,intermediate,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Rising Bull Access,easy,duplicate_within_resort
+Big Sky,Bavarian Forest,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,missing,missing_name
+Big Sky,Screaming Left,advanced,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Lower Pine Marten,advanced,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Yeti Traverse,advanced,duplicate_within_resort
+Big Sky,Clubhouse Loop,easy,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Lazy Jack,easy,duplicate_within_resort
+Big Sky,Larkspur,advanced,duplicate_within_resort
+Big Sky,Mule Skinner,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,Outlook Way,easy,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Lower Trapline,advanced,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,Rips,extreme,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,Rips,extreme,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,Clubhouse Loop,easy,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,Skittles Road,intermediate,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Lenin,expert,duplicate_within_resort
+Big Sky,Middle River,easy,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,intermediate,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Take a Bough,easy,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Rips,extreme,duplicate_within_resort
+Big Sky,,intermediate,missing_name
+Big Sky,,missing,missing_name
+Big Sky,White Otter,easy,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Great Falls Gully,expert,duplicate_within_resort
+Big Sky,Aspen  Meadows,advanced,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,advanced,missing_name
+Big Sky,Hippy Highway,intermediate,duplicate_within_resort
+Big Sky,Papa Bear,easy,duplicate_within_resort
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,,easy,missing_name
+Big Sky,Trapline,advanced,duplicate_within_resort
+Big Sky,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,International Trees,advanced,duplicate_within_resort
+Sun Valley,Roundhouse Lane,easy,duplicate_within_resort
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,International,advanced,duplicate_within_resort
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,International Trees,advanced,duplicate_within_resort
+Sun Valley,,advanced,missing_name
+Sun Valley,I-80,intermediate,duplicate_within_resort
+Sun Valley,,easy,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,novice,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,International Trees,advanced,duplicate_within_resort
+Sun Valley,Gun Tower Lane,easy,duplicate_within_resort
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,Roundhouse Lane,easy,duplicate_within_resort
+Sun Valley,,advanced,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,Roundhouse Slope,easy,duplicate_within_resort
+Sun Valley,,missing,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,Warm Springs Face,intermediate,duplicate_within_resort
+Sun Valley,International Trees,advanced,duplicate_within_resort
+Sun Valley,International Trees,advanced,duplicate_within_resort
+Sun Valley,,easy,missing_name
+Sun Valley,,advanced,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,,easy,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,,missing,missing_name
+Sun Valley,,intermediate,missing_name
+Sun Valley,,easy,missing_name
+Mammoth,,intermediate,missing_name
+Mammoth,,intermediate,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,easy,missing_name
+Mammoth,Ski Back Trail,easy,duplicate_within_resort
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,intermediate,missing_name
+Mammoth,,advanced,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,easy,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,missing,missing_name
+Mammoth,Old 10 Breakover,missing,unmappable_difficulty:missing
+Mammoth,Saint Moritz,novice,duplicate_within_resort
+Mammoth,,missing,missing_name
+Mammoth,Mambo,intermediate,duplicate_within_resort
+Mammoth,,intermediate,missing_name
+Mammoth,,novice,missing_name
+Mammoth,,intermediate,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,missing,missing_name
+Mammoth,,intermediate,missing_name
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,Trail 90,advanced,numeric_or_artifact_name
+Palisades Tahoe,Sunnyside,intermediate,duplicate_within_resort
+Palisades Tahoe,Sun Bowl,advanced,duplicate_within_resort
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,,novice,missing_name
+Palisades Tahoe,Alpine Bowl,intermediate,duplicate_within_resort
+Palisades Tahoe,,advanced,missing_name
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,Alpine Bowl,intermediate,duplicate_within_resort
+Palisades Tahoe,Howard's Hollow,intermediate,duplicate_within_resort
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,D8,advanced,numeric_or_artifact_name
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,Sunspot,intermediate,duplicate_within_resort
+Palisades Tahoe,Yellow Trail,intermediate,duplicate_within_resort
+Palisades Tahoe,,intermediate,missing_name
+Palisades Tahoe,,intermediate,missing_name
+Heavenly,,missing,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,easy,missing_name
+Heavenly,,easy,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,easy,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,Easy Street,easy,duplicate_within_resort
+Heavenly,,easy,missing_name
+Heavenly,,advanced,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,easy,missing_name
+Heavenly,Ski Ways Glades,advanced,duplicate_within_resort
+Heavenly,Canyonland,intermediate,duplicate_within_resort
+Heavenly,,easy,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,missing,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,Hogsback,advanced,duplicate_within_resort
+Heavenly,,easy,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,missing,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,,advanced,missing_name
+Heavenly,,missing,missing_name
+Heavenly,,intermediate,missing_name
+Heavenly,Maggie's,easy,duplicate_within_resort
+Heavenly,,intermediate,missing_name
+Heavenly,,easy,missing_name
+Heavenly,Pinnacles,advanced,duplicate_within_resort
+Heavenly,Ridge Run,intermediate,duplicate_within_resort
+Heavenly,,intermediate,missing_name
+Heavenly,Groove Park,easy,duplicate_within_resort
+Northstar,,missing,missing_name
+Northstar,Village Run,missing,unmappable_difficulty:missing
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,Lookout,missing,unmappable_difficulty:missing
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,advanced,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,intermediate,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Northstar,,missing,missing_name
+Killington,,easy,missing_name
+Killington,,easy,missing_name
+Killington,,easy,missing_name
+Killington,Chute,intermediate,duplicate_within_resort
+Killington,,intermediate,missing_name
+Killington,,easy,missing_name
+Killington,,easy,missing_name
+Killington,,intermediate,missing_name
+Killington,Caper,easy,duplicate_within_resort
+Killington,,intermediate,missing_name
+Killington,,easy,missing_name
+Killington,,intermediate,missing_name
+Killington,,intermediate,missing_name
+Killington,Old Superstar,advanced,duplicate_within_resort
+Killington,Bear Claw,intermediate,duplicate_within_resort
+Killington,,intermediate,missing_name
+Killington,,advanced,missing_name
+Killington,Sunrise Trail,easy,duplicate_within_resort
+Killington,,intermediate,missing_name
+Killington,,intermediate,missing_name
+Killington,,easy,missing_name
+Killington,Great Northern,intermediate,duplicate_within_resort
+Killington,Pipe Dream,intermediate,duplicate_within_resort
+Killington,,easy,missing_name
+Killington,,easy,missing_name
+Killington,Escape,intermediate,duplicate_within_resort
+Killington,Conclusion,advanced,duplicate_within_resort
+Killington,Great Bear - Upper,intermediate,duplicate_within_resort
+Killington,,advanced,missing_name
+Killington,,advanced,missing_name
+Killington,,intermediate,missing_name
+Killington,Sundog,easy,duplicate_within_resort
+Killington,Mouse Run - Upper,intermediate,duplicate_within_resort
+Killington,,easy,missing_name
+Killington,Sundog,easy,duplicate_within_resort
+Killington,Caper,easy,duplicate_within_resort
+Killington,Great Northern - Lower,easy,duplicate_within_resort
+Killington,,intermediate,missing_name
+Killington,Snowshed Crossover,easy,duplicate_within_resort
+Stowe,,intermediate,missing_name
+Stowe,,missing,missing_name
+Stowe,Side Street,intermediate,duplicate_within_resort
+Stowe,,missing,missing_name
+Stowe,Switchback,intermediate,duplicate_within_resort
+Stowe,,missing,missing_name
+Stowe,,missing,missing_name
+Stowe,Lower Smugglers,intermediate,duplicate_within_resort
+Stowe,,missing,missing_name
+Stowe,,easy,missing_name
+Stowe,Lower Switchback,intermediate,duplicate_within_resort
+Stowe,,missing,missing_name
+Stowe,Midway,advanced,duplicate_within_resort
+Stowe,Hayride,advanced,duplicate_within_resort
+Stowe,Midway,advanced,duplicate_within_resort
+Stowe,Main Street,intermediate,duplicate_within_resort
+Stowe,,intermediate,missing_name
+Stowe,Upper Smugglers,advanced,duplicate_within_resort
+Stowe,,intermediate,missing_name
+Stowe,Side Street,intermediate,duplicate_within_resort
+Stowe,,intermediate,missing_name
+Stowe,,missing,missing_name
+Stowe,Crossover,easy,duplicate_within_resort
+Stowe,Crossover,easy,duplicate_within_resort
+Stowe,,intermediate,missing_name
