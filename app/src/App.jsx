@@ -285,20 +285,27 @@ export default function App() {
         </div>
         {statsResult && (
           <div style={statsResultStyle}>
-            <div style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6b6452', marginBottom: 4 }}>
-              Green vs. Black + Double-Black
+            <div style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#6b6452', marginBottom: 6 }}>
+              Green vs. Black + Dbl-Black
             </div>
-            <div style={{ fontSize: 18, fontWeight: 'normal', lineHeight: 1.3 }}>
+            {/* Verdict */}
+            <div style={{ fontSize: 13, fontWeight: 'bold', color: statsResult.p < 0.05 ? '#3d8b5c' : '#6b6452', marginBottom: 4 }}>
+              {statsResult.p < 0.05
+                ? 'Yes — green names are more positive'
+                : 'No significant difference'}
+            </div>
+            <div style={{ fontSize: 16, fontVariant: 'small-caps', letterSpacing: '0.04em', marginBottom: 2 }}>
               {formatP(statsResult.p)}
             </div>
-            <div style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic', marginTop: 2 }}>
-              Welch&rsquo;s t = {statsResult.t.toFixed(2)}, df = {Math.round(statsResult.df)}
+            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic' }}>
+              Welch&rsquo;s t({Math.round(statsResult.df)}) = {statsResult.t.toFixed(2)}
             </div>
-            <div style={{ fontSize: 12, color: '#6b6452', fontStyle: 'italic' }}>
-              Cohen&rsquo;s d = {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)} effect)
+            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic' }}>
+              Cohen&rsquo;s d = {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)})
             </div>
-            <div style={{ fontSize: 11, color: '#6b6452', fontStyle: 'italic', marginTop: 4 }}>
-              green avg {statsResult.meanA > 0 ? '+' : ''}{statsResult.meanA.toFixed(2)} · black avg {statsResult.meanB > 0 ? '+' : ''}{statsResult.meanB.toFixed(2)}
+            <div style={{ fontSize: 10, color: '#6b6452', fontStyle: 'italic', marginTop: 3, borderTop: '1px dotted #d4cab3', paddingTop: 3 }}>
+              Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} sentiment pts
+              &nbsp;(n={statsResult.nA} green, n={statsResult.nB} hard)
             </div>
           </div>
         )}
@@ -344,7 +351,7 @@ export default function App() {
                 tick={{ fill: '#2d3e2a', fontSize: 11, fontFamily: 'Georgia' }} axisLine={{ stroke: '#2d3e2a' }} />
               <Tooltip content={<ScatterTooltip />} cursor={{ strokeDasharray: '3 3', stroke: '#6b6452' }} />
               <ReferenceLine y={0} stroke="#2d3e2a" strokeWidth={1} />
-              <Scatter data={filtered} shape={<DotShape />} />
+              <Scatter data={filtered} shape={DotShape} />
             </ScatterChart>
           </ResponsiveContainer>
         </div>
