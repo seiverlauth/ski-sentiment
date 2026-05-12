@@ -106,10 +106,10 @@ button, select, input {
   }
 }
 
-/* Table: hide less important columns on mobile */
+/* Table: scroll horizontally on mobile, keep all columns */
 @media (max-width: 600px) {
-  .col-resort, .col-state { display: none; }
-  .col-hits { display: none; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-scroll table { min-width: 600px; }
 }
 
 /* Filters: stack on mobile */

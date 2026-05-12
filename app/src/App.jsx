@@ -354,7 +354,7 @@ export default function App() {
             <span style={{ ...badgeStyle, fontSize: 12 }}>{filtered.length.toLocaleString()} trails</span>
           </div>
         </div>
-        <div style={{ overflowX: 'auto' }}>
+        <div style={{ overflowX: 'auto' }} className="table-scroll">
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
             <thead>
               <tr style={{ borderBottom: '1px solid #000' }}>
