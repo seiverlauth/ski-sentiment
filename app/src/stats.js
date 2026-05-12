@@ -1,4 +1,9 @@
-import { mean, variance, standardDeviation, cumulativeStdNormalProbability } from 'simple-statistics';
+import { mean, variance, standardDeviation, errorFunction } from 'simple-statistics';
+
+// Proper normal CDF using erf — no table truncation at z~4
+function normalCDF(z) {
+  return 0.5 * (1 + errorFunction(z / Math.SQRT2));
+}
 
 // Welch's t-test comparing two groups.
 // Returns { t, df, p, cohenD, meanA, meanB, nA, nB } or null if insufficient data.
@@ -25,7 +30,7 @@ export function welchTest(groupA, groupB) {
 
   // Two-tailed p-value.  For df > 30 the normal approx is tight; at
   // df > 100 (our typical case) the error is < 0.001.
-  const p = 2 * (1 - cumulativeStdNormalProbability(Math.abs(t)));
+  const p = 2 * (1 - normalCDF(Math.abs(t)));
 
   // Cohen's d with pooled SD
   const pooledSD = Math.sqrt(((nA - 1) * varA + (nB - 1) * varB) / (nA + nB - 2));
