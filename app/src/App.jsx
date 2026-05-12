@@ -238,22 +238,33 @@ export default function App() {
             </div>
           ))}
         </div>
-        {statsResult && (
-          <div style={{ ...statsResultStyle, position: 'relative' }} className="stats-verdict">
-            <div style={{ fontSize: 13, color: statsResult.p < 0.05 ? '#3d8b5c' : '#b8341a' }}>
-              {statsResult.p < 0.05 ? '✓ yes' : '✗ no'}
+        {statsResult && (() => {
+          const sig = statsResult.p < 0.05;
+          const greenHigher = statsResult.meanA > statsResult.meanB;
+          const verdict = !sig ? 'inconclusive' : greenHigher ? 'yes' : 'no';
+          const color = verdict === 'yes' ? '#3d8b5c' : verdict === 'no' ? '#b8341a' : '#888';
+          const subtext = verdict === 'yes'
+            ? 'green names score higher'
+            : verdict === 'no'
+            ? 'green names score lower'
+            : 'no significant difference';
+          return (
+            <div style={{ ...statsResultStyle, position: 'relative' }} className="stats-verdict">
+              <div style={{ fontSize: 13, color }}>
+                {verdict === 'yes' ? '✓ yes' : verdict === 'no' ? '✗ no' : '~ inconclusive'}
+              </div>
+              <div style={{ fontSize: 12, color: '#666' }}>{subtext}</div>
+              <div style={{ fontSize: 11, color: '#aaa', marginTop: 4 }}>hover for stats</div>
+              <div className="stats-detail">
+                <div>{formatP(statsResult.p)}</div>
+                <div>effect size: {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)})</div>
+                <div>green avg: {statsResult.meanA > 0 ? '+' : ''}{statsResult.meanA.toFixed(2)} · hard avg: {statsResult.meanB.toFixed(2)}</div>
+                <div>Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} pts</div>
+                <div style={{ marginTop: 6, color: '#999', fontSize: 11 }}>n={statsResult.nA} green, n={statsResult.nB} black/dbl</div>
+              </div>
             </div>
-            <div style={{ fontSize: 12, color: '#666' }}>green names score higher</div>
-            <div style={{ fontSize: 11, color: '#aaa', marginTop: 4 }}>hover for stats</div>
-            <div className="stats-detail">
-              <div>{formatP(statsResult.p)}</div>
-              <div>effect size: {statsResult.cohenD.toFixed(2)} ({cohenLabel(statsResult.cohenD)})</div>
-              <div>green avg: +{statsResult.meanA.toFixed(2)} · hard avg: {statsResult.meanB.toFixed(2)}</div>
-              <div>Δ = {(statsResult.meanA - statsResult.meanB).toFixed(2)} pts</div>
-              <div style={{ marginTop: 6, color: '#999', fontSize: 11 }}>n={statsResult.nA} green, n={statsResult.nB} black/dbl</div>
-            </div>
-          </div>
-        )}
+          );
+        })()}
       </div>
 
       {/* ── CHARTS ── */}
