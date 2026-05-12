@@ -68,7 +68,7 @@ export const LEXICON = {
   // MILD POSITIVE
   glade: 1, glades: 1, powder: 1, fluff: 1, cloud: 1, breeze: 1,
   ridge: 1, summit: 1, soar: 1, glide: 1, cruise: 1, cruiser: 1,
-  way: 0, road: 0, lane: 1, path: 1, view: 1, sunset: 1, sunrise: 1,
+  lane: 1, path: 1, view: 1, sunset: 1, sunrise: 1,
   gold: 1, golden: 1, silver: 1, crystal: 1, jewel: 1, gem: 1,
   rainbow: 2, star: 1, christmas: 1, holiday: 1,
   loop: 1, little: 1, catwalk: 1,
