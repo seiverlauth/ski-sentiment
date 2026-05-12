@@ -4095,39 +4095,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Beaver Meadows",
-    "difficulty": "blue",
-    "lat": 39.485116,
-    "lon": -106.061228,
-    "length_m": 2152,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Otter Slide",
-    "difficulty": "blue",
-    "lat": 39.493546,
-    "lon": -106.07047,
-    "length_m": 441,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Peak Seven Timber Road",
-    "difficulty": "blue",
-    "lat": 39.499216,
-    "lon": -106.083542,
-    "length_m": 1285,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Columbine",
     "difficulty": "blue",
     "lat": 39.475144,
@@ -4205,28 +4172,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Troll Forest",
-    "difficulty": "green",
-    "lat": 39.489745,
-    "lon": -106.053334,
-    "length_m": 1607,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Get Away",
-    "difficulty": "black",
-    "lat": 39.490476,
-    "lon": -106.051319,
-    "length_m": 13,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Park Lane Terrain Park",
     "difficulty": "blue",
     "lat": 39.476243,
@@ -4293,17 +4238,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Troll Forest",
-    "difficulty": "blue",
-    "lat": 39.486594,
-    "lon": -106.054627,
-    "length_m": 8,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Frosty's Freeway",
     "difficulty": "black",
     "lat": 39.467246,
@@ -4315,33 +4249,11 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Cool Whip",
-    "difficulty": "blue",
-    "lat": 39.48617,
-    "lon": -106.05756,
-    "length_m": 110,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Sundown Access",
     "difficulty": "green",
     "lat": 39.469436,
     "lon": -106.062339,
     "length_m": 375,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Shock Hill",
-    "difficulty": "black",
-    "lat": 39.488587,
-    "lon": -106.057623,
-    "length_m": 199,
     "source": "openskimap"
   },
   {
@@ -4364,17 +4276,6 @@
     "lat": 39.466198,
     "lon": -106.055696,
     "length_m": 1045,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Gluteus Minimus",
-    "difficulty": "blue",
-    "lat": 39.49192,
-    "lon": -106.071623,
-    "length_m": 13,
     "source": "openskimap"
   },
   {
@@ -4546,17 +4447,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Cool Whip, Willow",
-    "difficulty": "blue",
-    "lat": 39.4855,
-    "lon": -106.057681,
-    "length_m": 40,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Lower Cashier",
     "difficulty": "green",
     "lat": 39.468066,
@@ -4584,50 +4474,6 @@
     "lat": 39.490852,
     "lon": -106.098757,
     "length_m": 984,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Morning Glory",
-    "difficulty": "blue",
-    "lat": 39.483262,
-    "lon": -106.061856,
-    "length_m": 441,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Gluteus Maximus",
-    "difficulty": "black",
-    "lat": 39.490399,
-    "lon": -106.07196,
-    "length_m": 533,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "New Nordic World",
-    "difficulty": "blue",
-    "lat": 39.49333,
-    "lon": -106.075662,
-    "length_m": 982,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Morning Glory, Toad Alley",
-    "difficulty": "blue",
-    "lat": 39.482213,
-    "lon": -106.064236,
-    "length_m": 72,
     "source": "openskimap"
   },
   {
@@ -4843,33 +4689,11 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Shock Hill, Pence Miller",
-    "difficulty": "black",
-    "lat": 39.486689,
-    "lon": -106.053603,
-    "length_m": 184,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "West Snowbird",
     "difficulty": "black",
     "lat": 39.466788,
     "lon": -106.090035,
     "length_m": 743,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Gluteus Maximus",
-    "difficulty": "blue",
-    "lat": 39.488328,
-    "lon": -106.069245,
-    "length_m": 519,
     "source": "openskimap"
   },
   {
@@ -4947,17 +4771,6 @@
     "lat": 39.483902,
     "lon": -106.048803,
     "length_m": 19,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Gold Digger",
-    "difficulty": "green",
-    "lat": 39.486024,
-    "lon": -106.057014,
-    "length_m": 531,
     "source": "openskimap"
   },
   {
@@ -5052,17 +4865,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Elk Dance",
-    "difficulty": "black",
-    "lat": 39.504993,
-    "lon": -106.08951,
-    "length_m": 3167,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Way Out",
     "difficulty": "black",
     "lat": 39.465273,
@@ -5085,17 +4887,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Troll Forest, Little Red's Run",
-    "difficulty": "blue",
-    "lat": 39.487037,
-    "lon": -106.054424,
-    "length_m": 147,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Gold King",
     "difficulty": "blue",
     "lat": 39.468084,
@@ -5112,17 +4903,6 @@
     "lat": 39.469857,
     "lon": -106.088958,
     "length_m": 854,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Troll Forest, Little Red's Run, Ken's Kavern",
-    "difficulty": "blue",
-    "lat": 39.487808,
-    "lon": -106.053904,
-    "length_m": 27,
     "source": "openskimap"
   },
   {
@@ -5156,17 +4936,6 @@
     "lat": 39.476755,
     "lon": -106.080456,
     "length_m": 1612,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Shortcut",
-    "difficulty": "blue",
-    "lat": 39.500258,
-    "lon": -106.0877,
-    "length_m": 423,
     "source": "openskimap"
   },
   {
@@ -5261,17 +5030,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Shock Hill, Pence Miller, Olympian's Bridge",
-    "difficulty": "black",
-    "lat": 39.487117,
-    "lon": -106.052567,
-    "length_m": 45,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "American",
     "difficulty": "black",
     "lat": 39.46411,
@@ -5354,17 +5112,6 @@
     "lat": 39.49712,
     "lon": -106.100265,
     "length_m": 285,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Beaver Meadows, Willow",
-    "difficulty": "blue",
-    "lat": 39.488572,
-    "lon": -106.059027,
-    "length_m": 88,
     "source": "openskimap"
   },
   {
@@ -5646,39 +5393,6 @@
     "resort": "Breckenridge",
     "resort_slug": "breckenridge",
     "state": "CO",
-    "name": "Baby Doe",
-    "difficulty": "green",
-    "lat": 39.484781,
-    "lon": -106.058552,
-    "length_m": 147,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Hang Ten",
-    "difficulty": "black",
-    "lat": 39.487998,
-    "lon": -106.062242,
-    "length_m": 556,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Engleman, Gluteus Minimus",
-    "difficulty": "blue",
-    "lat": 39.490572,
-    "lon": -106.071136,
-    "length_m": 339,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
     "name": "Crescendo",
     "difficulty": "blue",
     "lat": 39.473322,
@@ -5783,17 +5497,6 @@
     "lat": 39.476461,
     "lon": -106.074232,
     "length_m": 1305,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Breckenridge",
-    "resort_slug": "breckenridge",
-    "state": "CO",
-    "name": "Troll Forest, Little Red's Run",
-    "difficulty": "green",
-    "lat": 39.488213,
-    "lon": -106.053643,
-    "length_m": 18,
     "source": "openskimap"
   },
   {
@@ -12928,17 +12631,6 @@
     "resort": "Crested Butte",
     "resort_slug": "crested-butte",
     "state": "CO",
-    "name": "Family Cross Course",
-    "difficulty": "blue",
-    "lat": 38.900151,
-    "lon": -106.937569,
-    "length_m": 529,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Crested Butte",
-    "resort_slug": "crested-butte",
-    "state": "CO",
     "name": "Painter Boy",
     "difficulty": "green",
     "lat": 38.905755,
@@ -13984,17 +13676,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Loop 4",
-    "difficulty": "green",
-    "lat": 37.944302,
-    "lon": -107.839988,
-    "length_m": 24,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Cimarron",
     "difficulty": "black",
     "lat": 37.930771,
@@ -14011,28 +13692,6 @@
     "lat": 37.902936,
     "lon": -107.829626,
     "length_m": 1010,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Campbell Peak View Trail",
-    "difficulty": "green",
-    "lat": 37.939475,
-    "lon": -107.849909,
-    "length_m": 443,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Skunk Creek Trails",
-    "difficulty": "blue",
-    "lat": 37.937495,
-    "lon": -107.875375,
-    "length_m": 70,
     "source": "openskimap"
   },
   {
@@ -14099,28 +13758,6 @@
     "lat": 37.930333,
     "lon": -107.817873,
     "length_m": 44,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 1",
-    "difficulty": "green",
-    "lat": 37.939156,
-    "lon": -107.823201,
-    "length_m": 115,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Bike 'n Hike Trail",
-    "difficulty": "green",
-    "lat": 37.943394,
-    "lon": -107.82718,
-    "length_m": 1666,
     "source": "openskimap"
   },
   {
@@ -14226,17 +13863,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Boulevard",
-    "difficulty": "blue",
-    "lat": 37.936017,
-    "lon": -107.870821,
-    "length_m": 168,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "May Girl",
     "difficulty": "green",
     "lat": 37.901908,
@@ -14253,17 +13879,6 @@
     "lat": 37.924609,
     "lon": -107.823754,
     "length_m": 612,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Lynx Loop",
-    "difficulty": "blue",
-    "lat": 37.90701,
-    "lon": -107.846108,
-    "length_m": 1936,
     "source": "openskimap"
   },
   {
@@ -14292,17 +13907,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Skunk Creek Trails",
-    "difficulty": "black",
-    "lat": 37.940868,
-    "lon": -107.870494,
-    "length_m": 216,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "The Plunge",
     "difficulty": "black",
     "lat": 37.924971,
@@ -14319,17 +13923,6 @@
     "lat": 37.930533,
     "lon": -107.838026,
     "length_m": 384,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 3",
-    "difficulty": "green",
-    "lat": 37.943478,
-    "lon": -107.828768,
-    "length_m": 1536,
     "source": "openskimap"
   },
   {
@@ -14385,17 +13978,6 @@
     "lat": 37.913968,
     "lon": -107.840878,
     "length_m": 2247,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 7",
-    "difficulty": "green",
-    "lat": 37.948354,
-    "lon": -107.852839,
-    "length_m": 1020,
     "source": "openskimap"
   },
   {
@@ -14479,17 +14061,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Boomerang Loop",
-    "difficulty": "blue",
-    "lat": 37.907956,
-    "lon": -107.852218,
-    "length_m": 547,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Woozley's Way",
     "difficulty": "blue",
     "lat": 37.911002,
@@ -14523,28 +14094,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Loop 2",
-    "difficulty": "green",
-    "lat": 37.940114,
-    "lon": -107.822269,
-    "length_m": 673,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Magic Meadow Loop",
-    "difficulty": "blue",
-    "lat": 37.906048,
-    "lon": -107.858456,
-    "length_m": 39,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Wozzley's Way",
     "difficulty": "blue",
     "lat": 37.909957,
@@ -14572,17 +14121,6 @@
     "lat": 37.928139,
     "lon": -107.81974,
     "length_m": 639,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 8",
-    "difficulty": "green",
-    "lat": 37.946565,
-    "lon": -107.867288,
-    "length_m": 985,
     "source": "openskimap"
   },
   {
@@ -14633,17 +14171,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Goose Connector",
-    "difficulty": "blue",
-    "lat": 37.939012,
-    "lon": -107.857526,
-    "length_m": 315,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Dynamo",
     "difficulty": "double-black",
     "lat": 37.905264,
@@ -14655,33 +14182,11 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Wilson Loop",
-    "difficulty": "blue",
-    "lat": 37.937739,
-    "lon": -107.878562,
-    "length_m": 735,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "O'Reilly's",
     "difficulty": "black",
     "lat": 37.935653,
     "lon": -107.820476,
     "length_m": 312,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 9",
-    "difficulty": "green",
-    "lat": 37.949169,
-    "lon": -107.856783,
-    "length_m": 833,
     "source": "openskimap"
   },
   {
@@ -14743,17 +14248,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Loop 6",
-    "difficulty": "green",
-    "lat": 37.947375,
-    "lon": -107.848502,
-    "length_m": 1243,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Mammoth",
     "difficulty": "black",
     "lat": 37.918062,
@@ -14770,17 +14264,6 @@
     "lat": 37.903678,
     "lon": -107.828487,
     "length_m": 859,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 5",
-    "difficulty": "green",
-    "lat": 37.94723,
-    "lon": -107.844666,
-    "length_m": 101,
     "source": "openskimap"
   },
   {
@@ -14842,17 +14325,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Wilson Loop",
-    "difficulty": "green",
-    "lat": 37.934683,
-    "lon": -107.878764,
-    "length_m": 266,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Pandora",
     "difficulty": "black",
     "lat": 37.931812,
@@ -14875,17 +14347,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Boulevard",
-    "difficulty": "green",
-    "lat": 37.935506,
-    "lon": -107.864368,
-    "length_m": 1569,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Bee's Run",
     "difficulty": "black",
     "lat": 37.900621,
@@ -14902,17 +14363,6 @@
     "lat": 37.922644,
     "lon": -107.853555,
     "length_m": 3968,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Boomerang Road Trail",
-    "difficulty": "green",
-    "lat": 37.944139,
-    "lon": -107.836077,
-    "length_m": 416,
     "source": "openskimap"
   },
   {
@@ -14985,17 +14435,6 @@
     "resort": "Telluride",
     "resort_slug": "telluride",
     "state": "CO",
-    "name": "Double Eagle Loop",
-    "difficulty": "green",
-    "lat": 37.938161,
-    "lon": -107.866746,
-    "length_m": 1339,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
     "name": "Prospect Woods",
     "difficulty": "black",
     "lat": 37.894356,
@@ -15012,17 +14451,6 @@
     "lat": 37.90202,
     "lon": -107.839281,
     "length_m": 1516,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Elk Crossing Trail",
-    "difficulty": "black",
-    "lat": 37.940609,
-    "lon": -107.863844,
-    "length_m": 182,
     "source": "openskimap"
   },
   {
@@ -15056,17 +14484,6 @@
     "lat": 37.926795,
     "lon": -107.849726,
     "length_m": 1073,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Loop 10",
-    "difficulty": "green",
-    "lat": 37.948822,
-    "lon": -107.86474,
-    "length_m": 1588,
     "source": "openskimap"
   },
   {
@@ -15111,17 +14528,6 @@
     "lat": 37.916317,
     "lon": -107.835429,
     "length_m": 448,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Boomerang Loop",
-    "difficulty": "black",
-    "lat": 37.904757,
-    "lon": -107.860357,
-    "length_m": 449,
     "source": "openskimap"
   },
   {
@@ -15177,17 +14583,6 @@
     "lat": 37.923334,
     "lon": -107.821627,
     "length_m": 371,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Lawson Trailhead",
-    "difficulty": "green",
-    "lat": 37.948275,
-    "lon": -107.871045,
-    "length_m": 117,
     "source": "openskimap"
   },
   {
@@ -15309,17 +14704,6 @@
     "lat": 37.93769,
     "lon": -107.848902,
     "length_m": 585,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Telluride",
-    "resort_slug": "telluride",
-    "state": "CO",
-    "name": "Magic Meadow Loop",
-    "difficulty": "black",
-    "lat": 37.908627,
-    "lon": -107.852489,
-    "length_m": 627,
     "source": "openskimap"
   },
   {
@@ -15837,17 +15221,6 @@
     "lat": 39.873944,
     "lon": -105.791571,
     "length_m": 984,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Winter Park",
-    "resort_slug": "winter-park",
-    "state": "CO",
-    "name": "Ambush",
-    "difficulty": "black",
-    "lat": 39.885406,
-    "lon": -105.768721,
-    "length_m": 477,
     "source": "openskimap"
   },
   {
@@ -18626,17 +17999,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Buddy Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.603707,
-    "lon": -111.523019,
-    "length_m": 1058,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Arrowhead",
     "difficulty": "blue",
     "lat": 40.68832,
@@ -18939,28 +18301,6 @@
     "lat": 40.64989,
     "lon": -111.566661,
     "length_m": 409,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Milly Meadow Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.606494,
-    "lon": -111.539208,
-    "length_m": 4072,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Empire Pass Connector Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.606342,
-    "lon": -111.516929,
-    "length_m": 1528,
     "source": "openskimap"
   },
   {
@@ -19319,17 +18659,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Willow Creek Loop Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.699187,
-    "lon": -111.533836,
-    "length_m": 3064,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Silver Horse",
     "difficulty": "black",
     "lat": 40.675774,
@@ -19522,17 +18851,6 @@
     "lat": 40.68831,
     "lon": -111.587793,
     "length_m": 495,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "5K Nordic Loop",
-    "difficulty": "blue",
-    "lat": 40.658917,
-    "lon": -111.512535,
-    "length_m": 4887,
     "source": "openskimap"
   },
   {
@@ -19748,28 +19066,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Ollie Lolly Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.600364,
-    "lon": -111.526605,
-    "length_m": 580,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Armstrong Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.663256,
-    "lon": -111.523761,
-    "length_m": 149,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Mainline",
     "difficulty": "blue",
     "lat": 40.67921,
@@ -19781,33 +19077,11 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "McLeod Creek Nordic Trail, McLeod Creek",
-    "difficulty": "green",
-    "lat": 40.664286,
-    "lon": -111.511828,
-    "length_m": 941,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Crescent",
     "difficulty": "black",
     "lat": 40.63522,
     "lon": -111.514406,
     "length_m": 745,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "McLeod Creek Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.694382,
-    "lon": -111.527014,
-    "length_m": 1697,
     "source": "openskimap"
   },
   {
@@ -20078,17 +19352,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Goose Getaway Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.604833,
-    "lon": -111.527492,
-    "length_m": 1981,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Fools Gold",
     "difficulty": "black",
     "lat": 40.631581,
@@ -20287,17 +19550,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Miss Billy's Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.691168,
-    "lon": -111.53979,
-    "length_m": 1465,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Hawk Eye",
     "difficulty": "blue",
     "lat": 40.61975,
@@ -20424,17 +19676,6 @@
     "lat": 40.696452,
     "lon": -111.592777,
     "length_m": 1724,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Willow Creek Access Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.694243,
-    "lon": -111.532154,
-    "length_m": 59,
     "source": "openskimap"
   },
   {
@@ -20672,17 +19913,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Farm Nordic Trail",
-    "difficulty": "black",
-    "lat": 40.678237,
-    "lon": -111.531486,
-    "length_m": 6488,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "High Peak",
     "difficulty": "double-black",
     "lat": 40.692771,
@@ -20892,17 +20122,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "3K Nordic Loop",
-    "difficulty": "green",
-    "lat": 40.665946,
-    "lon": -111.517605,
-    "length_m": 2431,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "Oops",
     "difficulty": "blue",
     "lat": 40.651076,
@@ -21062,17 +20281,6 @@
     "lat": 40.65482,
     "lon": -111.550411,
     "length_m": 432,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Dog Nordic Loop",
-    "difficulty": "green",
-    "lat": 40.671332,
-    "lon": -111.518372,
-    "length_m": 1671,
     "source": "openskimap"
   },
   {
@@ -21761,17 +20969,6 @@
     "resort": "Park City",
     "resort_slug": "park-city",
     "state": "UT",
-    "name": "Split Rail Nordic Trail",
-    "difficulty": "green",
-    "lat": 40.698467,
-    "lon": -111.533711,
-    "length_m": 1317,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
     "name": "O-Zone",
     "difficulty": "double-black",
     "lat": 40.614041,
@@ -22052,17 +21249,6 @@
     "lat": 40.640692,
     "lon": -111.510356,
     "length_m": 950,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Park City",
-    "resort_slug": "park-city",
-    "state": "UT",
-    "name": "Shortcut Nordic Trail",
-    "difficulty": "blue",
-    "lat": 40.607381,
-    "lon": -111.535319,
-    "length_m": 140,
     "source": "openskimap"
   },
   {
@@ -37480,17 +36666,6 @@
     "resort": "Palisades Tahoe",
     "resort_slug": "palisades-tahoe",
     "state": "CA",
-    "name": "Tiegel Terrain Park",
-    "difficulty": "green",
-    "lat": 39.16234,
-    "lon": -120.236869,
-    "length_m": 212,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Palisades Tahoe",
-    "resort_slug": "palisades-tahoe",
-    "state": "CA",
     "name": "East Creek",
     "difficulty": "blue",
     "lat": 39.156644,
@@ -38574,17 +37749,6 @@
     "lat": 38.936808,
     "lon": -119.893367,
     "length_m": 354,
-    "source": "openskimap"
-  },
-  {
-    "resort": "Heavenly",
-    "resort_slug": "heavenly",
-    "state": "CA",
-    "name": "Upper Powder Bowl",
-    "difficulty": "blue",
-    "lat": 38.919656,
-    "lon": -119.919306,
-    "length_m": 320,
     "source": "openskimap"
   },
   {

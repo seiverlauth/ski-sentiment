@@ -388,6 +388,17 @@ def process_resort(
             })
             continue
 
+        # Drop non-downhill uses (nordic, hike, fatbike, skitour, etc.)
+        uses = props.get("uses") or []
+        if "downhill" not in uses:
+            skipped_rows.append({
+                "resort": resort_cfg["resort"],
+                "name": trail_name,
+                "osm_difficulty": props.get("difficulty") or "missing",
+                "reason": f"non_downhill_use:{','.join(uses) or 'none'}",
+            })
+            continue
+
         # Map difficulty
         osm_diff = props.get("difficulty") or ""
         osm_diff_lower = osm_diff.strip().lower()

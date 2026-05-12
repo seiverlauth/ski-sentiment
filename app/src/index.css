@@ -18,7 +18,7 @@ a:hover { text-decoration: underline; }
 .stats-detail {
   display: none;
   position: absolute;
-  bottom: calc(100% + 8px);
+  top: calc(100% + 8px);
   right: 0;
   background: #f3f4f1;
   border: 1px solid #000;
